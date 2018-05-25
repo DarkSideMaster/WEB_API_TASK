@@ -34,8 +34,11 @@ namespace Database.Repositories
 
         public void Update(Organization item)
         {
+        if(item!=null)
+            {
              _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
+            }
         }
 
         public void Delete(int id)
