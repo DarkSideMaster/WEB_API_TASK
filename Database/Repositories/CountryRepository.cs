@@ -27,15 +27,18 @@ namespace Database.Repositories
         }
 
         public void Create(Country item)
-        {
+        {        
             _context.Сountries.Add(item);
             _context.SaveChanges();
         }
 
         public void Update(Country item)
         {
+             if(item!=null)
+             {
             _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
+            }
         }
 
         public void Delete(int id)
