@@ -16,12 +16,11 @@ namespace WEB_API_Task_WebApplication.Controllers
     public class CountryController : Controller
     {
         private readonly CountryRepository _countryRepository;
-        private readonly ILogger _logger;
 
-        public CountryController(EnterpriseContext context, ILogger<Country> logger)
+
+        public CountryController(EnterpriseContext context)
         {
             _countryRepository = new CountryRepository(context);
-            _logger = logger;
         }
         
         [AllowAnonymous]

@@ -16,12 +16,12 @@ namespace WEB_API_Task_WebApplication.Controllers
     public class BusinessController : Controller
     {
         private readonly BusinessRepository _businessRepository;
-        private readonly ILogger _logger;
+       // private readonly ILogger _logger;
 
-        public BusinessController(EnterpriseContext context, ILogger<Business> logger)
+        public BusinessController(EnterpriseContext context) //ILogger<Business> logger)
         {
             _businessRepository = new BusinessRepository(context);
-            _logger = logger;
+           // _logger = logger;
         }
         [AllowAnonymous]
         [HttpGet]

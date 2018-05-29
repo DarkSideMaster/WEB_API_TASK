@@ -16,12 +16,10 @@ namespace WEB_API_Task_WebApplication.Controllers
     public class DepartmentController : Controller
     {
         private readonly DepartmentRepository _departmentRepository;
-        private readonly ILogger _logger;
 
-        public DepartmentController(EnterpriseContext context, ILogger<Department> logger)
+        public DepartmentController(EnterpriseContext context)
         {
             _departmentRepository = new DepartmentRepository(context);
-            _logger = logger;
         }
         
         [AllowAnonymous]
