@@ -15,12 +15,10 @@ namespace WEB_API_Task_WebApplication.Controllers
     public class UserController : Controller
     {
         private readonly UserRepository _userRepository;
-        private readonly ILogger _logger;
 
-        public UserController(EnterpriseContext context, ILogger<User> logger)
+        public UserController(EnterpriseContext context)
         {
             _userRepository = new UserRepository(context);
-            _logger = logger;
         }
         
         [AllowAnonymous]

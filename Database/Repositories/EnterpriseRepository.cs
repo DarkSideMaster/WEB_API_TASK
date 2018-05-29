@@ -51,7 +51,7 @@ namespace Database.Repositories
              {
             _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            }
+             }
         }
 
         public void Delete(int id)

@@ -16,12 +16,10 @@ namespace WEB_API_Task_WebApplication.Controllers
     public class EnterpriseController : Controller
     {
         private readonly EnterpriseRepository _enterpriseRepository;
-        private readonly ILogger _logger;
 
-        public EnterpriseController(EnterpriseContext context, ILogger<Enterprise> logger)
+        public EnterpriseController(EnterpriseContext context)
         {
             _enterpriseRepository = new EnterpriseRepository(context);
-            _logger = logger;
         }
         
         [Route("All")]

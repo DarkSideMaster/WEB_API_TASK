@@ -17,7 +17,6 @@ namespace WEB_API_Task_WebApplication.Controllers
     {
         private readonly CountryRepository _countryRepository;
 
-
         public CountryController(EnterpriseContext context)
         {
             _countryRepository = new CountryRepository(context);
@@ -41,7 +40,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Delete")]
         [HttpPost]
-        public List<Country> Delete(int Id)
+        public List<Country>Delete(int Id)
         {
             _countryRepository.Delete(Id);
 

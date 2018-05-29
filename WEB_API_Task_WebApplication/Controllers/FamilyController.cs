@@ -15,14 +15,11 @@ namespace WEB_API_Task_WebApplication.Controllers
     [Route("api/[controller]")]
     public class FamilyController : Controller
     {
-
         private readonly FamilyRepository  _familyRepository;
-        private readonly ILogger _logger;
 
-        public FamilyController(EnterpriseContext context, ILogger<Family> logger)
+        public FamilyController(EnterpriseContext context)
         {
             _familyRepository = new FamilyRepository(context);
-            _logger = logger;
         }
         
         [AllowAnonymous]

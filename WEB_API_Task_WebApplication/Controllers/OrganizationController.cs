@@ -16,12 +16,10 @@ namespace WEB_API_Task_WebApplication.Controllers
     {
 
         private readonly OrganizationRepository _organizationRepository;
-        private readonly ILogger _logger;
 
-        public OrganizationController(EnterpriseContext context, ILogger<Organization> logger)
+        public OrganizationController(EnterpriseContext context)
         {
             _organizationRepository = new OrganizationRepository(context);
-            _logger = logger;
         }
 
        [AllowAnonymous]

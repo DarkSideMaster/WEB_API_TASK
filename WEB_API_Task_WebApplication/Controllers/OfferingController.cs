@@ -14,14 +14,11 @@ namespace WEB_API_Task_WebApplication.Controllers
     [Route("api/[controller]")]
     public class OfferingController : Controller
     {
-
         private readonly OfferingRepository _offeringRepository;
-        private readonly ILogger _logger;
 
-        public OfferingController(EnterpriseContext context, ILogger<Offering> logger)
+        public OfferingController(EnterpriseContext context)
         {
             _offeringRepository = new OfferingRepository(context);
-            _logger = logger;
         }
 
         [AllowAnonymous]
