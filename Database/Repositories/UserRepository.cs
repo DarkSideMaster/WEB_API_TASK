@@ -10,7 +10,6 @@ namespace Database.Repositories
     public class UserRepository : IRepository<User>
     {
         private EnterpriseContext _context;
-        private bool _disposed = false;
 
         public UserRepository(EnterpriseContext context)
         {
@@ -34,37 +33,23 @@ namespace Database.Repositories
 
         public void Update(User item)
         {
-        if(item!=null)
+            if (item != null)
             {
-            _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
+                _context.Entry(item).State = EntityState.Modified;
+                _context.SaveChanges();
             }
         }
 
         public void Delete(int id)
         {
             User user = _context.Users.Find(id);
+
             if (user != null)
-                _context.Users.Remove(user);
-            _context.SaveChanges();
-        }
-
-        public virtual void Dispose(bool disposing)
-        {
-            if (!this._disposed)
             {
-                if (disposing)
-                {
-                    _context.Dispose();
-                }
+                _context.Users.Remove(user);
+                _context.SaveChanges();
             }
-            this._disposed = true;
         }
 
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
     }
 }

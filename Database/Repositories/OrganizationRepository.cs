@@ -10,7 +10,6 @@ namespace Database.Repositories
     public class OrganizationRepository : IRepository<Organization>
     {
         private EnterpriseContext _context;
-        private bool _disposed = false;
 
         public OrganizationRepository(EnterpriseContext context)
         {
@@ -34,37 +33,22 @@ namespace Database.Repositories
 
         public void Update(Organization item)
         {
-        if(item!=null)
+            if (item != null)
             {
-             _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
+                _context.Entry(item).State = EntityState.Modified;
+                _context.SaveChanges();
             }
         }
 
         public void Delete(int id)
         {
             Organization organization = _context.Organizations.Find(id);
+
             if (organization != null)
-                _context.Organizations.Remove(organization);
-            _context.SaveChanges();
-        }
-
-        public virtual void Dispose(bool disposing)
-        {
-            if (!this._disposed)
             {
-                if (disposing)
-                {
-                    _context.Dispose();
-                }
+                _context.Organizations.Remove(organization);
+                _context.SaveChanges();
             }
-            this._disposed = true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }

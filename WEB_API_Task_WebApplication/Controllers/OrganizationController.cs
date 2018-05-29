@@ -14,7 +14,6 @@ namespace WEB_API_Task_WebApplication.Controllers
     [Route("api/[controller]")]
     public class OrganizationController : Controller
     {
-
         private readonly OrganizationRepository _organizationRepository;
 
         public OrganizationController(EnterpriseContext context)

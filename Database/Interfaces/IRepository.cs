@@ -4,7 +4,7 @@ using Database.Models;
 
 namespace Database.Interfaces
 {
-    public interface IRepository<T> : IDisposable where T : class 
+    public interface IRepository<T>  where T : class 
     {
         List<T> Entities { get;}
         T GetEntity(int id); 

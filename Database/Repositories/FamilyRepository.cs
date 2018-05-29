@@ -10,7 +10,6 @@ namespace Database.Repositories
     public class FamilyRepository : IRepository<Family>
     {
         private EnterpriseContext _context;
-        private bool _disposed = false;
 
         public FamilyRepository(EnterpriseContext context)
         {
@@ -36,7 +35,7 @@ namespace Database.Repositories
         {
              if (item!=null)
              {
-             _context.Entry(item).State = EntityState.Modified;    
+            _context.Entry(item).State = EntityState.Modified;    
             _context.SaveChanges();
              }
         }
@@ -44,27 +43,12 @@ namespace Database.Repositories
         public void Delete(int id)
         {
             Family family = _context.Familys.Find(id);
+
             if (family != null)
-                _context.Familys.Remove(family);
-            _context.SaveChanges();
-        }
-
-        public virtual void Dispose(bool disposing)
-        {
-            if (!this._disposed)
             {
-                if (disposing)
-                {
-                    _context.Dispose();
-                }
+                _context.Familys.Remove(family);
+                _context.SaveChanges();
             }
-            this._disposed = true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }

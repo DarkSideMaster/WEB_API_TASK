@@ -10,7 +10,6 @@ namespace Database.Repositories
     public class OfferingRepository : IRepository<Offering>
     {
         private EnterpriseContext _context;
-        private bool _disposed = false;
 
         public OfferingRepository(EnterpriseContext context)
         {
@@ -34,37 +33,22 @@ namespace Database.Repositories
 
         public void Update(Offering item)
         {
-        if(item!=null)
-           {
-            _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
+            if (item != null)
+            {
+                _context.Entry(item).State = EntityState.Modified;
+                _context.SaveChanges();
             }
         }
 
         public void Delete(int id)
         {
             Offering offering = _context.Offerings.Find(id);
+
             if (offering != null)
-                _context.Offerings.Remove(offering);
-            _context.SaveChanges();
-        }
-
-        public virtual void Dispose(bool disposing)
-        {
-            if (!this._disposed)
             {
-                if (disposing)
-                {
-                    _context.Dispose();
-                }
+                _context.Offerings.Remove(offering);
+                _context.SaveChanges();
             }
-            this._disposed = true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }
