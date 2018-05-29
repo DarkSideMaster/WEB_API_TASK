@@ -27,17 +27,19 @@ namespace Database.Repositories
         }
 
         public void Create(Department item)
-        {
-          
-             _context.Departments.Add(item);
+        {        
+            _context.Departments.Add(item);
             _context.SaveChanges();
         }
 
         public void Update(Department item)
         {
+        
+        if (item!=null)
+           {
             _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-
+            }
         }
 
         public void Delete(int id)
