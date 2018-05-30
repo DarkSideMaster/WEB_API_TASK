@@ -31,7 +31,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public List<Offering> Create(Offering item)
-        {
+        {      
+             if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating offering");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+        
             _offeringRepository.Create(item);
 
             return _offeringRepository.Entities;
@@ -41,6 +52,17 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Offering> Delete(int Id)
         {
+            if (Id == null)
+            {
+                ModelState.AddModelError("", "No data for deleting offering");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+              
             _offeringRepository.Delete(Id);
 
             return _offeringRepository.Entities;
@@ -50,10 +72,21 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Offering> Update(Offering item) 
         {
+        
+         if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating offering");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+              
             _offeringRepository.Update(item);
 
             return _offeringRepository.Entities;
-        }   
-      
+        }        
     }
 }
