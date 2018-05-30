@@ -32,7 +32,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public List<Department> Create(Department item)
-        {
+        {       
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating department");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+             
             _departmentRepository.Create(item);
 
             return _departmentRepository.Entities;
@@ -42,6 +53,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Department> Delete(int Id)
         {
+        
+            if (Id == null)
+            {
+                ModelState.AddModelError("", "No data for deleting department");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+                   
             _departmentRepository.Delete(Id);
 
             return _departmentRepository.Entities;
@@ -51,6 +74,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Department> Update(Department item) 
         {
+        
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating department");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+        
             _departmentRepository.Update(item);
 
             return _departmentRepository.Entities;
