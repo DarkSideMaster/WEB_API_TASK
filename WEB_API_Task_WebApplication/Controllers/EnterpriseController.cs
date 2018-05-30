@@ -40,7 +40,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public List<Enterprise> Create(Enterprise item)
-        {
+        {       
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating enterprise");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+                      
             _enterpriseRepository.Create(item);
 
             return _enterpriseRepository.Entities;
@@ -48,8 +59,20 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [Route("Delete")]
         [HttpPost]
-        public List<Enterprise> Delete(int Id)
+        public List<Enterprise> Delete(int Id)       
         {
+        
+            if (Id == null)
+            {
+                ModelState.AddModelError("", "No data for deleting enterprise");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+                        
             _enterpriseRepository.Delete(Id);
 
             return _enterpriseRepository.Entities;
@@ -59,6 +82,17 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Enterprise> Update(Enterprise item) 
         {
+              if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating enterprise");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }      
+           
             _enterpriseRepository.Update(item);
 
             return _enterpriseRepository.Entities;
