@@ -33,22 +33,16 @@ namespace Database.Repositories
 
         public void Update(Offering item)
         {
-            if (item != null)
-            {
                 _context.Entry(item).State = EntityState.Modified;
                 _context.SaveChanges();
-            }
         }
 
         public void Delete(int id)
         {
             Offering offering = _context.Offerings.Find(id);
 
-            if (offering != null)
-            {
                 _context.Offerings.Remove(offering);
                 _context.SaveChanges();
-            }
         }
     }
 }
