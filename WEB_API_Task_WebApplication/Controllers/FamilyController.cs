@@ -32,7 +32,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public List<Family> Create(Family item)
-        {
+        {       
+             if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating family");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+                  
             _familyRepository.Create(item);
             
             return _familyRepository.Entities;
@@ -41,7 +52,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Delete")]
         [HttpPost]
         public List<Family> Delete(int Id)
-        {
+        {        
+             if (Id == null)
+            {
+                ModelState.AddModelError("", "No data for deleting family");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+              
             _familyRepository.Delete(Id);
 
             return _familyRepository.Entities;
@@ -51,11 +73,21 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Family> Update(Family item) 
         {
+        
+             if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating family");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+             
             _familyRepository.Update(item);
 
             return _familyRepository.Entities;
         } 
- 
- 
     }
 }
