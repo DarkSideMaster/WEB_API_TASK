@@ -33,22 +33,16 @@ namespace Database.Repositories
 
         public void Update(Country item)
         {
-            if (item != null)
-            {
                 _context.Entry(item).State = EntityState.Modified;
                 _context.SaveChanges();
-            }
         }
 
         public void Delete(int id)
         {
             Country country = _context.Сountries.Find(id);
 
-            if (country != null)
-            {
                 _context.Сountries.Remove(country);
                 _context.SaveChanges();
-            }
         }
     }
 }
