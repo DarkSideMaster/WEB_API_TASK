@@ -34,16 +34,16 @@ namespace WEB_API_Task_WebApplication.Controllers
         public List<Country> Create(Country item)
         {
         
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for add country");
-                return BadRequest(ModelState);
-            }
+            //if (item == null)
+            //{
+            //    ModelState.AddModelError("", "No data for add country");
+            //    return BadRequest(ModelState);
+            //}
         
-             if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
+            // if (!ModelState.IsValid)
+            // {
+            //    return BadRequest(ModelState);
+            // }
                
             _countryRepository.Create(item);
 
@@ -53,18 +53,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Delete")]
         [HttpPost]
         public List<Country>Delete(int Id)
-        {       
-             if (Id == null)
-            {
-                ModelState.AddModelError("", "No data for deleting country");
-                return BadRequest(ModelState);
-            }
-        
-             if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
-        
+        {            
             _countryRepository.Delete(Id);
 
             return _countryRepository.Entities;
@@ -74,16 +63,16 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Country> Update(Country item) 
         {       
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating country");
-                return BadRequest(ModelState);
-            }
+            //if (item == null)
+            //{
+            //    ModelState.AddModelError("", "No data for updating country");
+            //    return BadRequest(ModelState);
+            //}
         
-            if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
+            //if (!ModelState.IsValid)
+            // {
+            //    return BadRequest(ModelState);
+            // }
             
             _countryRepository.Update(item);
 

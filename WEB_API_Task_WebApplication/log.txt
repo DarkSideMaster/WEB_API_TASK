@@ -1,0 +1,3 @@
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 

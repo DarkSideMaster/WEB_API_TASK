@@ -10,6 +10,6 @@ namespace Database.Interfaces
         T GetEntity(int id); 
         void Create(T item); 
         void Update(T item);
-        void Delete(int id); 
+        T Delete(int id); 
     }
 }

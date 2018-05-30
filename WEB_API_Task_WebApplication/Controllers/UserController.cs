@@ -32,17 +32,17 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<User> Create(User item)
         {
-         if (item == null)
+            if (item == null)
             {
                 ModelState.AddModelError("", "No data for creating user");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-             
+            }
+
             _userRepository.Create(item);
 
             return _userRepository.Entities;
@@ -52,18 +52,17 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<User> Delete(int Id)
         {
-        
-          if (Id == null)
+            if (Id < 0)
             {
-                ModelState.AddModelError("", "No data for deleting user");
+                ModelState.AddModelError("", "No data for creating user");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-        
+            }
+
             _userRepository.Delete(Id);
 
             return _userRepository.Entities;
@@ -73,18 +72,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<User> Update(User item) 
         {
-        
+
             if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating user");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-              
+            }
+
             _userRepository.Update(item);
 
             return _userRepository.Entities;

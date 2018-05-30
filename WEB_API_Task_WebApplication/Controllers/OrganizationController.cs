@@ -32,16 +32,16 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public List<Organization> Create(Organization item)
         {       
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for creating organization");
-                return BadRequest(ModelState);
-            }
+            //if (item == null)
+            //{
+            //    ModelState.AddModelError("", "No data for creating organization");
+            //    return BadRequest(ModelState);
+            //}
         
-             if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
+            // if (!ModelState.IsValid)
+            // {
+            //    return BadRequest(ModelState);
+            // }
              
             _organizationRepository.Create(item);
 
@@ -51,19 +51,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Delete")]
         [HttpPost]
         public List<Organization> Delete(int Id)
-        {
-  
-        if (Id == null)
-            {
-                ModelState.AddModelError("", "No data for deleting organization");
-                return BadRequest(ModelState);
-            }
-        
-             if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
-            
+        {           
             _organizationRepository.Delete(Id);
 
             return _organizationRepository.Entities;
@@ -74,16 +62,16 @@ namespace WEB_API_Task_WebApplication.Controllers
         public List<Organization> Update(Organization item) 
         {
         
-         if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating organization");
-                return BadRequest(ModelState);
-            }
+         //if (item == null)
+         //   {
+         //       ModelState.AddModelError("", "No data for updating organization");
+         //       return BadRequest(ModelState);
+         //   }
         
-             if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
+         //    if (!ModelState.IsValid)
+         //    {
+         //       return BadRequest(ModelState);
+         //    }
          
            _organizationRepository.Update(item);
 

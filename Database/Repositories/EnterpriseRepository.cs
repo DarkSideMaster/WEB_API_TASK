@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Database.Interfaces;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
@@ -25,9 +26,9 @@ namespace Database.Repositories
                 .FirstOrDefault(enterprise => enterprise.Id == id);
         }
 
-        public async Task<Enterprise> GetEnterpriseTree(int enterpriseId)
+        public async Task<Enterprise>GetEnterpriseTree(int enterpriseId)
         {
-            return  await _context.Enterprises.ToListAsync()
+            return  await _context.Enterprises
                 .Include(e => e.Organizations)
                 .ThenInclude(o => o.Countries)
                 .ThenInclude(c => c.Businesses)
@@ -35,7 +36,7 @@ namespace Database.Repositories
                 .ThenInclude(f => f.Offerings)
                 .ThenInclude(o => o.Departments)
                 .ThenInclude(d => d.Users)
-                .FirstOrDefault(e => e.Id == enterpriseId);
+                .FirstOrDefaultAsync(e => e.Id == enterpriseId);
         }
 
         public void Create(Enterprise item)
@@ -50,12 +51,13 @@ namespace Database.Repositories
                 _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public Enterprise Delete(int id)
         {
             Enterprise enterprise = _context.Enterprises.Find(id);
 
-                _context.Enterprises.Remove(enterprise);
+              var entity = _context.Enterprises.Remove(enterprise).Entity;
                 _context.SaveChanges();
+            return entity;
         }
     }
 }

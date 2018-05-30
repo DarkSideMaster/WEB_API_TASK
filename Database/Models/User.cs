@@ -1,4 +1,6 @@
-﻿namespace Database.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Database.Models
 {
     public class User
     {
