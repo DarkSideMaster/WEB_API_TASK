@@ -46,22 +46,16 @@ namespace Database.Repositories
 
         public void Update(Enterprise item)
         {
-            if (item != null)
-            {
                 _context.Entry(item).State = EntityState.Modified;
                 _context.SaveChanges();
-            }
         }
 
         public void Delete(int id)
         {
             Enterprise enterprise = _context.Enterprises.Find(id);
 
-            if (enterprise != null)
-            {
                 _context.Enterprises.Remove(enterprise);
                 _context.SaveChanges();
-            }
         }
     }
 }
