@@ -53,7 +53,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         public IActionResult Delete(int Id)
         {  
         
-        if (item == null)
+        if (item < 0)
             {
                 ModelState.AddModelError("", "No data for deleting organization");
                 return BadRequest(ModelState);
