@@ -46,7 +46,7 @@ namespace WEB_API_Task_WebApplication.Controllers
              
             _departmentRepository.Create(item);
 
-            return _departmentRepository.Entities;
+            return Ok(_departmentRepository.Entities);
         }
         
         [Route("Delete")]
