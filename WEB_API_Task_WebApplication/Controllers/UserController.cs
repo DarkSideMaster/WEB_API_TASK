@@ -72,7 +72,6 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Update(User item) 
         {
-
             if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating user");
