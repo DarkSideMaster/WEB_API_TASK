@@ -26,7 +26,7 @@ namespace Database.Repositories
                 .FirstOrDefault(enterprise => enterprise.Id == id);
         }
 
-        public async Task<Enterprise>GetEnterpriseTree(int enterpriseId)
+        public async Task<Enterprise>GetEnterpriseTreeAsync(int enterpriseId)
         {
             return  await _context.Enterprises
                 .Include(e => e.Organizations)
