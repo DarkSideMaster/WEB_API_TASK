@@ -54,7 +54,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         {
             if (Id < 0)
             {
-                ModelState.AddModelError("", "No data for creating user");
+                ModelState.AddModelError("", "No data for deleting user");
                 return BadRequest(ModelState);
             }
 
