@@ -9,7 +9,7 @@ namespace Database.Models
         public string Name { get; set; }
         [Required(ErrorMessage = "Enter second name, please!")]
         public string Surname { get; set; }
-        [EmailAddress(ErrorMessage = "Please enter a valid Email address")] 
+        [EmailAddress(ErrorMessage = "Please enter a valid email address!")] 
         public string Email { get; set; }
         [Required(ErrorMessage = "Enter your adress, please!")]
         public string Adress { get; set; }
