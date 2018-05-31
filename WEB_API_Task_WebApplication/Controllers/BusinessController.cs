@@ -51,12 +51,21 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Delete")]
         [HttpPost]
-        public List<Business> Delete(int Id)
+        public IActionResult Delete(int Id)
         {            
-   
+            if (Id < 0)
+            {
+                ModelState.AddModelError("", "No data for deleting business");
+                return BadRequest(ModelState);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             _businessRepository.Delete(Id);
 
-            return _businessRepository.Entities;
+            return Ok(_businessRepository.Entities);
         }
         
         [Route("Update")]
