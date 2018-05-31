@@ -52,11 +52,22 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Delete")]
         [HttpPost]
-        public List<Country>Delete(int Id)
-        {            
+        public IActionResult Delete(int Id)
+        {    
+            if (item < 0)
+            {
+                ModelState.AddModelError("", "No data for deleting country");
+                return BadRequest(ModelState);
+            }
+        
+            if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+                    
             _countryRepository.Delete(Id);
 
-            return _countryRepository.Entities;
+            return Ok(_countryRepository.Entities);
         }
         
         [Route("Update")]
