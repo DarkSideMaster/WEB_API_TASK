@@ -8,8 +8,8 @@ namespace Database.Interfaces
     {
         List<T> Entities { get;}
         T GetEntity(int id); 
-        void Create(T item); 
-        void Update(T item);
+        T Create(T item); 
+        T Update(T item);
         T Delete(int id); 
     }
 }

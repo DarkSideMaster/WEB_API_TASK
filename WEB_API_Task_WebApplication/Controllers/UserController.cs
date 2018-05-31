@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WEB_API_Task_WebApplication.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     public class UserController : Controller
     {
@@ -20,7 +20,9 @@ namespace WEB_API_Task_WebApplication.Controllers
         {
             _userRepository = new UserRepository(context);
         }
-        
+
+
+        [Route("All")]
         [AllowAnonymous]
         [HttpGet]
         public IActionResult GetUsers()
@@ -67,10 +69,10 @@ namespace WEB_API_Task_WebApplication.Controllers
 
             return Ok(_userRepository.Entities);
         }
-        
+
         [Route("Update")]
         [HttpPost]
-        public IActionResult Update(User item) 
+        public IActionResult Update(User item)
         {
             if (item == null)
             {

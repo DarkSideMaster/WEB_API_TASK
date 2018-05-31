@@ -33,16 +33,17 @@ namespace Database.Repositories
 
         public void Update(Country item)
         {
-                _context.Entry(item).State = EntityState.Modified;
-                _context.SaveChanges();
+            _context.Entry(item).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public Country Delete(int id)
         {
             Country country = _context.Сountries.Find(id);
 
-                _context.Сountries.Remove(country);
-                _context.SaveChanges();
+            var entity = _context.Сountries.Remove(country).Entity;
+            _context.SaveChanges();
+            return entity;
         }
     }
 }

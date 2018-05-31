@@ -33,16 +33,17 @@ namespace Database.Repositories
 
         public void Update(Business item)
         {
-                _context.Entry(item).State = EntityState.Modified;
-                _context.SaveChanges();
+            _context.Entry(item).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public Business Delete(int id)
         {
             Business business = _context.Businesses.Find(id);
 
-                _context.Businesses.Remove(business);
-                _context.SaveChanges();
+            var entity = _context.Businesses.Remove(business).Entity;
+            _context.SaveChanges();
+            return entity;
         }
     }
 }

@@ -15,13 +15,14 @@ namespace WEB_API_Task_WebApplication.Controllers
     [Route("api/[controller]")]
     public class FamilyController : Controller
     {
-        private readonly FamilyRepository  _familyRepository;
+        private readonly FamilyRepository _familyRepository;
 
         public FamilyController(EnterpriseContext context)
         {
             _familyRepository = new FamilyRepository(context);
         }
-        
+
+        [Route("All")]
         [AllowAnonymous]
         [HttpGet]
         public IActionResult GetFamilys()
@@ -32,63 +33,60 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public IActionResult Create(Family item)
-        {       
-             if (item == null)
+        {
+            if (item == null)
             {
                 ModelState.AddModelError("", "No data for creating family");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-                  
+            }
+
             _familyRepository.Create(item);
-            
+
             return Ok(_familyRepository.Entities);
         }
 
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
-        {    
-        
-          if (item < 0)
+        {
+
+            if (Id < 0)
             {
                 ModelState.AddModelError("", "No data for deleting family");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
-             
-            _familyRepository.Delete(Id);
 
-            return Ok(_familyRepository.Entities);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            return Ok(_familyRepository.Delete(Id));
         }
-        
+
         [Route("Update")]
         [HttpPost]
-        public IActionResult Update(Family item) 
+        public IActionResult Update(Family item)
         {
-        
-             if (item == null)
+
+            if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating family");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
-                return BadRequest(ModelState);
-             }
-             
-            _familyRepository.Update(item);
 
-            return Ok(_familyRepository.Entities);
-        } 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            return Ok(_familyRepository.Update(item));
+
+        }
     }
 }

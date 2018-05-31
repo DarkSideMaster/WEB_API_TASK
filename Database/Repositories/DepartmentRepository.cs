@@ -33,16 +33,17 @@ namespace Database.Repositories
 
         public void Update(Department item)
         {
-                _context.Entry(item).State = EntityState.Modified;
-                _context.SaveChanges();
+            _context.Entry(item).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public Department Delete(int id)
         {
             Department department = _context.Departments.Find(id);
 
-                _context.Departments.Remove(department);
-                _context.SaveChanges();
+            var entity = _context.Departments.Remove(department).Entity;
+            _context.SaveChanges();
+            return entity;
         }
     }
 }

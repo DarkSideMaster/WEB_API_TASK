@@ -37,12 +37,14 @@ namespace Database.Repositories
                 _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public Offering Delete(int id)
         {
             Offering offering = _context.Offerings.Find(id);
 
-                _context.Offerings.Remove(offering);
+            var entity = _context.Offerings.Remove(offering).Entity;
                 _context.SaveChanges();
+
+            return entity;
         }
     }
 }

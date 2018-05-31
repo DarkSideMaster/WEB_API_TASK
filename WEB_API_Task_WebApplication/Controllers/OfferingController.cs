@@ -21,6 +21,7 @@ namespace WEB_API_Task_WebApplication.Controllers
             _offeringRepository = new OfferingRepository(context);
         }
 
+        [Route("All")]
         [AllowAnonymous]
         [HttpGet]
         public IActionResult GetOfferings()
@@ -31,18 +32,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public IActionResult Create(Offering item)
-        {      
-             if (item == null)
+        {
+            if (item == null)
             {
                 ModelState.AddModelError("", "No data for creating offering");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-        
+            }
+
             _offeringRepository.Create(item);
 
             return Ok(_offeringRepository.Entities);
@@ -52,41 +53,41 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-        if (item < 0)
+            if (Id < 0)
             {
                 ModelState.AddModelError("", "No data for deleting offering");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-           
+            }
+
             _offeringRepository.Delete(Id);
 
             return Ok(_offeringRepository.Entities);
         }
-        
+
         [Route("Update")]
         [HttpPost]
-        public IActionResult Update(Offering item) 
+        public IActionResult Update(Offering item)
         {
-        
-         if (item == null)
+
+            if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating offering");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-              
+            }
+
             _offeringRepository.Update(item);
 
             return Ok(_offeringRepository.Entities);
-        }        
+        }
     }
 }

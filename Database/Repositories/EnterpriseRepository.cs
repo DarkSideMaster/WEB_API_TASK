@@ -26,9 +26,9 @@ namespace Database.Repositories
                 .FirstOrDefault(enterprise => enterprise.Id == id);
         }
 
-        public async Task<Enterprise>GetEnterpriseTreeAsync(int enterpriseId)
+        public async Task<Enterprise> GetEnterpriseTreeAsync(int enterpriseId)
         {
-            return  await _context.Enterprises
+            return await _context.Enterprises
                 .Include(e => e.Organizations)
                 .ThenInclude(o => o.Countries)
                 .ThenInclude(c => c.Businesses)
@@ -47,16 +47,16 @@ namespace Database.Repositories
 
         public void Update(Enterprise item)
         {
-                _context.Entry(item).State = EntityState.Modified;
-                _context.SaveChanges();
+            _context.Entry(item).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public Enterprise Delete(int id)
         {
             Enterprise enterprise = _context.Enterprises.Find(id);
 
-              var entity = _context.Enterprises.Remove(enterprise).Entity;
-                _context.SaveChanges();
+            var entity = _context.Enterprises.Remove(enterprise).Entity;
+            _context.SaveChanges();
             return entity;
         }
     }

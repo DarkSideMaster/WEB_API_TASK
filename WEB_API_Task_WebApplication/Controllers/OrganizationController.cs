@@ -21,7 +21,8 @@ namespace WEB_API_Task_WebApplication.Controllers
             _organizationRepository = new OrganizationRepository(context);
         }
 
-       [AllowAnonymous]
+        [Route("All")]
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult GetOrganizations()
         {
@@ -31,18 +32,18 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public IActionResult Create(Organization item)
-        {       
+        {
             if (item == null)
             {
                 ModelState.AddModelError("", "No data for creating organization");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
-               return BadRequest(ModelState);
-             }
-             
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             _organizationRepository.Create(item);
 
             return Ok(_organizationRepository.Entities);
@@ -51,41 +52,41 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
-        {  
-        
-        if (item < 0)
+        {
+
+            if (Id < 0)
             {
                 ModelState.AddModelError("", "No data for deleting organization");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
-               return BadRequest(ModelState);
-             }
-             
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             _organizationRepository.Delete(Id);
 
             return Ok(_organizationRepository.Entities);
         }
-        
+
         [Route("Update")]
         [HttpPost]
-        public IActionResult Update(Organization item) 
+        public IActionResult Update(Organization item)
         {
-        
-         if (item == null)
+
+            if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating organization");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-         
-           _organizationRepository.Update(item);
+            }
+
+            _organizationRepository.Update(item);
 
             return Ok(_organizationRepository.Entities);
         }

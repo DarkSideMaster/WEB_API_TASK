@@ -25,24 +25,28 @@ namespace Database.Repositories
                 .FirstOrDefault(family => family.Id == id);
         }
 
-        public void Create(Family item)
+        public Family Create(Family item)
         {
-            _context.Familys.Add(item);
+            var entity = _context.Familys.Add(item).Entity;
             _context.SaveChanges();
+            return entity;
         }
 
-        public void Update(Family item)
+        public Family Update(Family item)
         {
-            _context.Entry(item).State = EntityState.Modified;    
+            var entity = _context.Entry(item).State = EntityState.Modified;
+
             _context.SaveChanges();
+            return entity;
         }
 
-        public void Delete(int id)
+        public Family Delete(int id)
         {
             Family family = _context.Familys.Find(id);
-            
-                _context.Familys.Remove(family);
-                _context.SaveChanges();
+
+            var entity = _context.Familys.Remove(family).Entity;
+            _context.SaveChanges();
+            return entity;
         }
     }
 }

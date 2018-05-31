@@ -22,9 +22,10 @@ namespace WEB_API_Task_WebApplication.Controllers
             _businessRepository = new BusinessRepository(context);
         }
 
+        [Route("All")]
         [AllowAnonymous]
         [HttpGet]
-        public  IActionResult GetBuisnesses()
+        public IActionResult GetBuisnesses()
         {
             return Ok(_businessRepository.Entities);
         }
@@ -32,27 +33,27 @@ namespace WEB_API_Task_WebApplication.Controllers
         [Route("Create")]
         [HttpPost]
         public IActionResult Create(Business item)
-        {      
+        {
             if (item == null)
             {
                 ModelState.AddModelError("", "No data for creating Business");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-             
+            }
+
             _businessRepository.Create(item);
 
             return Ok(_businessRepository.Entities);
         }
-        
+
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
-        {            
+        {
             if (Id < 0)
             {
                 ModelState.AddModelError("", "No data for deleting business");
@@ -67,26 +68,26 @@ namespace WEB_API_Task_WebApplication.Controllers
 
             return Ok(_businessRepository.Entities);
         }
-        
+
         [Route("Update")]
         [HttpPost]
-        public IActionResult Update(Business item) 
-        {     
+        public IActionResult Update(Business item)
+        {
             if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating Business");
                 return BadRequest(ModelState);
             }
-        
-             if (!ModelState.IsValid)
-             {
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
-             }
-                
+            }
+
             _businessRepository.Update(item);
 
             return Ok(_businessRepository.Entities);
         }
-                
+
     }
 }

@@ -33,16 +33,18 @@ namespace Database.Repositories
 
         public void Update(User item)
         {
-                _context.Entry(item).State = EntityState.Modified;
-                _context.SaveChanges();
+            _context.Entry(item).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public User Delete(int id)
         {
             User user = _context.Users.Find(id);
-            
-                _context.Users.Remove(user);
-                _context.SaveChanges();
+
+            var entity = _context.Users.Remove(user).Entity;
+            _context.SaveChanges();
+            return entity;
+
         }
     }
 }

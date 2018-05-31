@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Database;
 using Database.Models;
 using Database.Repositories;
@@ -21,7 +22,8 @@ namespace WEB_API_Task_WebApplication.Controllers
         {
             _enterpriseRepository = new EnterpriseRepository(context);
         }
-        
+
+      
         [Route("All")]
         [AllowAnonymous]
         [HttpGet]
@@ -32,11 +34,11 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [Route("EnterpriseTree")]
         [HttpGet]
-        public Enterprise EnterpriseTree(int enterpriseId)
+        public async Task<Enterprise> EnterpriseTreeAsync(int enterpriseId)
         {
-            return _enterpriseRepository.GetEnterpriseTree(enterpriseId);
+            return await _enterpriseRepository.GetEnterpriseTreeAsync(enterpriseId);
         }
-        
+
         [Route("Create")]
         [HttpPost]
         public IActionResult Create(Enterprise item)
@@ -59,9 +61,9 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [Route("Delete")]
         [HttpPost]
-        public IActionResult Delete(int Id)       
-        {   
-         if (item < 0)
+        public IActionResult Delete(int Id)
+        {
+            if (Id < 0)
             {
                 ModelState.AddModelError("", "No data for deleting enterprise");
                 return BadRequest(ModelState);
@@ -71,15 +73,15 @@ namespace WEB_API_Task_WebApplication.Controllers
             {
                 return BadRequest(ModelState);
             }
-            
+
             _enterpriseRepository.Delete(Id);
 
             return Ok(_enterpriseRepository.Entities);
         }
-        
+
         [Route("Update")]
         [HttpPost]
-        public IActionResult Update(Enterprise item) 
+        public IActionResult Update(Enterprise item)
         {
             if (item == null)
             {
