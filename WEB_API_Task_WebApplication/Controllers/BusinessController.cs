@@ -24,29 +24,29 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public List<Business> GetBuisnesses()
+        public  IActionResult GetBuisnesses()
         {
-            return _businessRepository.Entities;
+            return Ok(_businessRepository.Entities);
         }
 
         [Route("Create")]
         [HttpPost]
-        public List<Business> Create(Business item)
+        public IActionResult Create(Business item)
         {      
-            //if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for creating Business");
-            //    return BadRequest(ModelState);
-            //}
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating Business");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
              
             _businessRepository.Create(item);
 
-            return _businessRepository.Entities;
+            return Ok(_businessRepository.Entities);
         }
         
         [Route("Delete")]
@@ -61,22 +61,22 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Update")]
         [HttpPost]
-        public List<Business> Update(Business item) 
+        public IActionResult Update(Business item) 
         {     
-            //if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for updating Business");
-            //    return BadRequest(ModelState);
-            //}
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating Business");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
                 
             _businessRepository.Update(item);
 
-            return _businessRepository.Entities;
+            return Ok(_businessRepository.Entities);
         }
                 
     }
