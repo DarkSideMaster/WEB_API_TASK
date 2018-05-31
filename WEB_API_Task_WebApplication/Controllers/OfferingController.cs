@@ -50,11 +50,22 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [Route("Delete")]
         [HttpPost]
-        public List<Offering> Delete(int Id)
+        public IActionResult Delete(int Id)
         {
+        if (item < 0)
+            {
+                ModelState.AddModelError("", "No data for deleting offering");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+           
             _offeringRepository.Delete(Id);
 
-            return _offeringRepository.Entities;
+            return Ok(_offeringRepository.Entities);
         }
         
         [Route("Update")]
