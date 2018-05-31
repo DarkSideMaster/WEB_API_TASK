@@ -23,29 +23,29 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public List<Offering> GetOfferings()
+        public IActionResult GetOfferings()
         {
-            return _offeringRepository.Entities;
+            return Ok(_offeringRepository.Entities);
         }
 
         [Route("Create")]
         [HttpPost]
-        public List<Offering> Create(Offering item)
+        public IActionResult Create(Offering item)
         {      
-            // if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for creating offering");
-            //    return BadRequest(ModelState);
-            //}
+             if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating offering");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
         
             _offeringRepository.Create(item);
 
-            return _offeringRepository.Entities;
+            return Ok(_offeringRepository.Entities);
         }
 
         [Route("Delete")]
@@ -59,23 +59,23 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Update")]
         [HttpPost]
-        public List<Offering> Update(Offering item) 
+        public IActionResult Update(Offering item) 
         {
         
-         //if (item == null)
-         //   {
-         //       ModelState.AddModelError("", "No data for updating offering");
-         //       return BadRequest(ModelState);
-         //   }
+         if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating offering");
+                return BadRequest(ModelState);
+            }
         
-         //    if (!ModelState.IsValid)
-         //    {
-         //       return BadRequest(ModelState);
-         //    }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
               
             _offeringRepository.Update(item);
 
-            return _offeringRepository.Entities;
+            return Ok(_offeringRepository.Entities);
         }        
     }
 }
