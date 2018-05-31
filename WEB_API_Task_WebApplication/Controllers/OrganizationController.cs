@@ -50,11 +50,23 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [Route("Delete")]
         [HttpPost]
-        public List<Organization> Delete(int Id)
-        {           
+        public IActionResult Delete(int Id)
+        {  
+        
+        if (item == null)
+            {
+                ModelState.AddModelError("", "No data for deleting organization");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+               return BadRequest(ModelState);
+             }
+             
             _organizationRepository.Delete(Id);
 
-            return _organizationRepository.Entities;
+            return Ok(_organizationRepository.Entities);
         }
         
         [Route("Update")]
