@@ -51,18 +51,28 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Delete")]
         [HttpPost]
-        public List<Department> Delete(int Id)
-        {               
+        public IActionResult Delete(int Id)
+        {  
+            if (item < 0)
+            {
+                ModelState.AddModelError("", "No data for deleting department");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+               
             _departmentRepository.Delete(Id);
 
-            return _departmentRepository.Entities;
+            return Ok(_departmentRepository.Entities);
         }
         
         [Route("Update")]
         [HttpPost]
         public IActionResult Update(Department item) 
-        {
-        
+        {       
             if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating department");
