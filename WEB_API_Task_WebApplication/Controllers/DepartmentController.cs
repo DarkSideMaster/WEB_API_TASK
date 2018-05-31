@@ -24,25 +24,25 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [AllowAnonymous]
         [HttpGet]
-        public List<Department> GetDepartments()
+        public IActionResult GetDepartments()
         {
-            return _departmentRepository.Entities;
+            return Ok(_departmentRepository.Entities);
         }
 
         [Route("Create")]
         [HttpPost]
-        public List<Department> Create(Department item)
+        public IActionResult Create(Department item)
         {       
-            //if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for creating department");
-            //    return BadRequest(ModelState);
-            //}
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating department");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
              
             _departmentRepository.Create(item);
 
@@ -60,23 +60,23 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Update")]
         [HttpPost]
-        public List<Department> Update(Department item) 
+        public IActionResult Update(Department item) 
         {
         
-            //if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for updating department");
-            //    return BadRequest(ModelState);
-            //}
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating department");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
         
             _departmentRepository.Update(item);
 
-            return _departmentRepository.Entities;
+            return Ok(_departmentRepository.Entities);
         }                     
     }
 }
