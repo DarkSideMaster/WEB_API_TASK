@@ -24,29 +24,29 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [AllowAnonymous]
         [HttpGet]
-        public List<Family> GetFamilys()
+        public IActionResult GetFamilys()
         {
-            return _familyRepository.Entities;
+            return Ok(_familyRepository.Entities);
         }
 
         [Route("Create")]
         [HttpPost]
-        public List<Family> Create(Family item)
+        public IActionResult Create(Family item)
         {       
-            // if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for creating family");
-            //    return BadRequest(ModelState);
-            //}
+             if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating family");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
                   
             _familyRepository.Create(item);
             
-            return _familyRepository.Entities;
+            return Ok(_familyRepository.Entities);
         }
 
         [Route("Delete")]
@@ -60,23 +60,23 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Update")]
         [HttpPost]
-        public List<Family> Update(Family item) 
+        public IActionResult Update(Family item) 
         {
         
-            // if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for updating family");
-            //    return BadRequest(ModelState);
-            //}
+             if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating family");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
              
             _familyRepository.Update(item);
 
-            return _familyRepository.Entities;
+            return Ok(_familyRepository.Entities);
         } 
     }
 }
