@@ -23,29 +23,29 @@ namespace WEB_API_Task_WebApplication.Controllers
 
        [AllowAnonymous]
         [HttpGet]
-        public List<Organization> GetOrganizations()
+        public IActionResult GetOrganizations()
         {
-            return _organizationRepository.Entities;
+            return Ok(_organizationRepository.Entities);
         }
 
         [Route("Create")]
         [HttpPost]
-        public List<Organization> Create(Organization item)
+        public IActionResult Create(Organization item)
         {       
-            //if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for creating organization");
-            //    return BadRequest(ModelState);
-            //}
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for creating organization");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+             {
+               return BadRequest(ModelState);
+             }
              
             _organizationRepository.Create(item);
 
-            return _organizationRepository.Entities;
+            return Ok(_organizationRepository.Entities);
         }
 
         [Route("Delete")]
@@ -59,23 +59,23 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Update")]
         [HttpPost]
-        public List<Organization> Update(Organization item) 
+        public IActionResult Update(Organization item) 
         {
         
-         //if (item == null)
-         //   {
-         //       ModelState.AddModelError("", "No data for updating organization");
-         //       return BadRequest(ModelState);
-         //   }
+         if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating organization");
+                return BadRequest(ModelState);
+            }
         
-         //    if (!ModelState.IsValid)
-         //    {
-         //       return BadRequest(ModelState);
-         //    }
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
          
            _organizationRepository.Update(item);
 
-            return _organizationRepository.Entities;
+            return Ok(_organizationRepository.Entities);
         }
     }
 }
