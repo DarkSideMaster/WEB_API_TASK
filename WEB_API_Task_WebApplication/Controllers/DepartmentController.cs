@@ -53,7 +53,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Delete(int Id)
         {  
-            if (item < 0)
+            if (item < 0 || id == typeof(string))
             {
                 ModelState.AddModelError("", "No data for deleting department");
                 return BadRequest(ModelState);
