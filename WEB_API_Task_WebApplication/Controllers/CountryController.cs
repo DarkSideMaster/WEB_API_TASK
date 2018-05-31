@@ -24,30 +24,30 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [AllowAnonymous]
         [HttpGet]
-        public List<Country> GetCountryses()
+        public IActionResult GetCountryses()
         {
-            return _countryRepository.Entities;
+            return Ok(_countryRepository.Entities);
         }
 
         [Route("Create")]
         [HttpPost]
-        public List<Country> Create(Country item)
+        public IActionResult Create(Country item)
         {
         
-            //if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for add country");
-            //    return BadRequest(ModelState);
-            //}
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for add country");
+                return BadRequest(ModelState);
+            }
         
-            // if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+             if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+             }
                
             _countryRepository.Create(item);
 
-            return _countryRepository.Entities;
+            return Ok(_countryRepository.Entities);
         }
         
         [Route("Delete")]
@@ -61,22 +61,22 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Update")]
         [HttpPost]
-        public List<Country> Update(Country item) 
+        public IActionResult Update(Country item) 
         {       
-            //if (item == null)
-            //{
-            //    ModelState.AddModelError("", "No data for updating country");
-            //    return BadRequest(ModelState);
-            //}
+            if (item == null)
+            {
+                ModelState.AddModelError("", "No data for updating country");
+                return BadRequest(ModelState);
+            }
         
-            //if (!ModelState.IsValid)
-            // {
-            //    return BadRequest(ModelState);
-            // }
+            if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
             
             _countryRepository.Update(item);
 
-            return _countryRepository.Entities;
+            return Ok(_countryRepository.Entities);
         }                   
    }
 }
