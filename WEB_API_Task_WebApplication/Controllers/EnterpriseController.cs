@@ -68,7 +68,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         
         [Route("Update")]
         [HttpPost]
-        public List<Enterprise> Update(Enterprise item) 
+        public IActionResult Update(Enterprise item) 
         {
             if (item == null)
             {
@@ -83,7 +83,7 @@ namespace WEB_API_Task_WebApplication.Controllers
 
             _enterpriseRepository.Update(item);
 
-            return _enterpriseRepository.Entities;
+            return Ok(_enterpriseRepository.Entities);
         }
     }
 }
