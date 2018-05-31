@@ -51,11 +51,23 @@ namespace WEB_API_Task_WebApplication.Controllers
 
         [Route("Delete")]
         [HttpPost]
-        public List<Family> Delete(int Id)
-        {                   
+        public IActionResult Delete(int Id)
+        {    
+        
+          if (item < 0)
+            {
+                ModelState.AddModelError("", "No data for deleting family");
+                return BadRequest(ModelState);
+            }
+        
+             if (!ModelState.IsValid)
+             {
+                return BadRequest(ModelState);
+             }
+             
             _familyRepository.Delete(Id);
 
-            return _familyRepository.Entities;
+            return Ok(_familyRepository.Entities);
         }
         
         [Route("Update")]
