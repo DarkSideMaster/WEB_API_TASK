@@ -27,25 +27,25 @@ namespace Database.Repositories
 
         public Department Create(Department item)
         {
-            var entity = _context.Departments.Add(item).Entity;
+            var createDepartmententity = _context.Departments.Add(item).Entity;
             _context.SaveChanges();
-            return entity;
+            return createDepartmententity;
         }
 
         public Department Update(Department item)
         {
-           var entity = _context.Entry(item).State = EntityState.Modified;
+           var updateDepartmententity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return entity;
+            return updateDepartmententity;
         }
 
         public Department Delete(int id)
         {
             Department department = _context.Departments.Find(id);
 
-            var entity = _context.Departments.Remove(department).Entity;
+            var deleteDepartmententity = _context.Departments.Remove(department).Entity;
             _context.SaveChanges();
-            return entity;
+            return deleteDepartmententity;
         }
     }
 }
