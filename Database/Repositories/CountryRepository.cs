@@ -25,16 +25,18 @@ namespace Database.Repositories
                 .FirstOrDefault(country => country.Id == id);
         }
 
-        public void Create(Country item)
+        public Country Create(Country item)
         {
-            _context.Сountries.Add(item);
+           var entity = _context.Сountries.Add(item).Entity;
             _context.SaveChanges();
+            return entity;
         }
 
         public void Update(Country item)
         {
-            _context.Entry(item).State = EntityState.Modified;
+           var entity _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
+            return entity;
         }
 
         public Country Delete(int id)
