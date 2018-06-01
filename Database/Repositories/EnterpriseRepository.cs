@@ -39,16 +39,18 @@ namespace Database.Repositories
                 .FirstOrDefaultAsync(e => e.Id == enterpriseId);
         }
 
-        public void Create(Enterprise item)
+        public Enterprise Create(Enterprise item)
         {
-            _context.Enterprises.Add(item);
+           var entity =  _context.Enterprises.Add(item).Entity;
             _context.SaveChanges();
+            return entity;
         }
 
-        public void Update(Enterprise item)
+        public Enterprise Update(Enterprise item)
         {
-            _context.Entry(item).State = EntityState.Modified;
+           var entity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
+            return entity;
         }
 
         public Enterprise Delete(int id)
