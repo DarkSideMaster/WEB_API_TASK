@@ -25,16 +25,18 @@ namespace Database.Repositories
                 .FirstOrDefault(user => user.Id == id);
         }
 
-        public void Create(User item)
+        public User Create(User item)
         {
-            _context.Users.Add(item);
+            var entity = _context.Users.Add(item).Entity;
             _context.SaveChanges();
+            return entity;
         }
 
-        public void Update(User item)
+        public User Update(User item)
         {
-            _context.Entry(item).State = EntityState.Modified;
+            var entity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
+            return entity;
         }
 
         public User Delete(int id)
@@ -44,7 +46,6 @@ namespace Database.Repositories
             var entity = _context.Users.Remove(user).Entity;
             _context.SaveChanges();
             return entity;
-
         }
     }
 }
