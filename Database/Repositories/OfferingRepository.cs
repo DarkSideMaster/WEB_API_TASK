@@ -27,16 +27,17 @@ namespace Database.Repositories
 
         public Offering Create(Offering item)
         {
-            var createOfferingentity =  _context.Offerings.Add(item).Entity;          
+            var createOfferingentity = _context.Offerings.Add(item).Entity;
             _context.SaveChanges();
             return createOfferingentity;
         }
 
         public Offering Update(Offering item)
         {
-               var updateOfferingentity = _context.Entry(item).State = EntityState.Modified;
-               _context.SaveChanges();
-                return updateOfferingentity;
+            _context.Entry(item).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return _context.Entry(item).Entity;
         }
 
         public Offering Delete(int id)

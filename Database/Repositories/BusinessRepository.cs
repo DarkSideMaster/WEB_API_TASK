@@ -32,12 +32,11 @@ namespace Database.Repositories
             return createBusinessentity;
         }
 
-        public void Update(Business item)
+        public Business Update(Business item)
         {
             _context.Entry(item).State = EntityState.Modified;
-            var updateBusinessentity = _context.Entry(item).State;
             _context.SaveChanges();
-            return updateBusinessentity;
+            return _context.Entry(item).Entity;
         }
 
         public Business Delete(int id)

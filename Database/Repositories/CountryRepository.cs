@@ -27,16 +27,16 @@ namespace Database.Repositories
 
         public Country Create(Country item)
         {
-           var createCountryentity = _context.Сountries.Add(item).Entity;
+            var createCountryentity = _context.Сountries.Add(item).Entity;
             _context.SaveChanges();
             return createCountryentity;
         }
 
-        public void Update(Country item)
+        public Country Update(Country item)
         {
-           var updateCountryentity = _context.Entry(item).State = EntityState.Modified;
+            _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return updateCountryentity;
+            return _context.Entry(item).Entity;
         }
 
         public Country Delete(int id)

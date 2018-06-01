@@ -45,9 +45,9 @@ namespace WEB_API_Task_WebApplication.Controllers
                 return BadRequest(ModelState);
             }
 
-            _departmentRepository.Create(item);
+            
 
-            return Ok(_departmentRepository.Entities);
+            return Ok(_departmentRepository.Create(item));
         }
 
         [Route("Delete")]
@@ -65,9 +65,8 @@ namespace WEB_API_Task_WebApplication.Controllers
                 return BadRequest(ModelState);
             }
 
-            _departmentRepository.Delete(Id);
-
-            return Ok(_departmentRepository.Entities);
+           
+            return Ok(_departmentRepository.Delete(Id));
         }
 
         [Route("Update")]
@@ -85,9 +84,7 @@ namespace WEB_API_Task_WebApplication.Controllers
                 return BadRequest(ModelState);
             }
 
-            _departmentRepository.Update(item);
-
-            return Ok(_departmentRepository.Entities);
+            return Ok(_departmentRepository.Update(item));
         }
     }
 }

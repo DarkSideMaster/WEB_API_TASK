@@ -34,9 +34,10 @@ namespace Database.Repositories
 
         public Department Update(Department item)
         {
-           var updateDepartmententity = _context.Entry(item).State = EntityState.Modified;
+            _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return updateDepartmententity;
+            
+            return _context.Entry(item).Entity;
         }
 
         public Department Delete(int id)

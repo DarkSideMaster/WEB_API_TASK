@@ -45,9 +45,7 @@ namespace WEB_API_Task_WebApplication.Controllers
                 return BadRequest(ModelState);
             }
 
-            _familyRepository.Create(item);
-
-            return Ok(_familyRepository.Entities);
+            return Ok(_familyRepository.Create(item));
         }
 
         [Route("Delete")]
@@ -73,7 +71,6 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Update(Family item)
         {
-
             if (item == null)
             {
                 ModelState.AddModelError("", "No data for updating family");

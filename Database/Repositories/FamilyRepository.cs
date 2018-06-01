@@ -34,10 +34,10 @@ namespace Database.Repositories
 
         public Family Update(Family item)
         {
-            var updateFamilyentity = _context.Entry(item).State = EntityState.Modified;
-
+            _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return updateFamilyentity;
+
+            return _context.Entry(item).Entity;
         }
 
         public Family Delete(int id)

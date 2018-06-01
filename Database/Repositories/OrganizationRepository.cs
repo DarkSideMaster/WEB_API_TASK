@@ -34,9 +34,10 @@ namespace Database.Repositories
 
         public Organization Update(Organization item)
         {
-            var updateOrganizationentity = _context.Entry(item).State = EntityState.Modified;
+            _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return updateOrganizationentity;
+
+            return _context.Entry(item).Entity;
         }
 
         public Organization Delete(int id)
