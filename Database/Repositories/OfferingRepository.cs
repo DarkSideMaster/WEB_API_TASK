@@ -25,16 +25,18 @@ namespace Database.Repositories
                 .FirstOrDefault(offering => offering.Id == id);
         }
 
-        public void Create(Offering item)
+        public Offering Create(Offering item)
         {
-            _context.Offerings.Add(item);
+            var entity =  _context.Offerings.Add(item).Entity;          
             _context.SaveChanges();
+            return entity;
         }
 
-        public void Update(Offering item)
+        public Offering Update(Offering item)
         {
-                _context.Entry(item).State = EntityState.Modified;
-                _context.SaveChanges();
+               var entity = _context.Entry(item).State = EntityState.Modified;
+               _context.SaveChanges();
+                return entity;
         }
 
         public Offering Delete(int id)
@@ -42,7 +44,7 @@ namespace Database.Repositories
             Offering offering = _context.Offerings.Find(id);
 
             var entity = _context.Offerings.Remove(offering).Entity;
-                _context.SaveChanges();
+            _context.SaveChanges();
 
             return entity;
         }
