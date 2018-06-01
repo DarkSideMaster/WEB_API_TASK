@@ -34,7 +34,7 @@ namespace Database.Repositories
 
         public void Update(Country item)
         {
-           var entity _context.Entry(item).State = EntityState.Modified;
+           var entity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
             return entity;
         }
