@@ -27,25 +27,25 @@ namespace Database.Repositories
 
         public Business Create(Business item)
         {
-            var entity =_context.Businesses.Add(item).Entity;
+            var createBusinessentity =_context.Businesses.Add(item).Entity;
             _context.SaveChanges();
-            return entity;
+            return createBusinessentity;
         }
 
         public void Update(Business item)
         {
-            var entity = _context.Entry(item).State = EntityState.Modified;
+            var updateBusinessentity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return entity;
+            return updateBusinessentity;
         }
 
         public Business Delete(int id)
         {
             Business business = _context.Businesses.Find(id);
 
-            var entity = _context.Businesses.Remove(business).Entity;
+            var deleteBusinessentity = _context.Businesses.Remove(business).Entity;
             _context.SaveChanges();
-            return entity;
+            return deleteBusinessentity;
         }
     }
 }
