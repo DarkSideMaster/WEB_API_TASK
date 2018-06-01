@@ -34,7 +34,8 @@ namespace Database.Repositories
 
         public void Update(Business item)
         {
-            var updateBusinessentity = _context.Entry(item).State = EntityState.Modified;
+            _context.Entry(item).State = EntityState.Modified;
+            var updateBusinessentity = _context.Entry(item).State;
             _context.SaveChanges();
             return updateBusinessentity;
         }
