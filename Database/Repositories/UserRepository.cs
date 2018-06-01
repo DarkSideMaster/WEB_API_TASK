@@ -35,7 +35,6 @@ namespace Database.Repositories
         public User Update(User item)
         {
             _context.Entry(item).State = EntityState.Modified;
-
             _context.SaveChanges();
             return _context.Entry(item).Entity;
         }
