@@ -27,26 +27,26 @@ namespace Database.Repositories
 
         public Offering Create(Offering item)
         {
-            var entity =  _context.Offerings.Add(item).Entity;          
+            var createOfferingentity =  _context.Offerings.Add(item).Entity;          
             _context.SaveChanges();
-            return entity;
+            return createOfferingentity;
         }
 
         public Offering Update(Offering item)
         {
-               var entity = _context.Entry(item).State = EntityState.Modified;
+               var updateOfferingentity = _context.Entry(item).State = EntityState.Modified;
                _context.SaveChanges();
-                return entity;
+                return updateOfferingentity;
         }
 
         public Offering Delete(int id)
         {
             Offering offering = _context.Offerings.Find(id);
 
-            var entity = _context.Offerings.Remove(offering).Entity;
+            var deleteOfferingentity = _context.Offerings.Remove(offering).Entity;
             _context.SaveChanges();
 
-            return entity;
+            return deleteOfferingentity;
         }
     }
 }
