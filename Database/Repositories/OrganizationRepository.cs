@@ -27,25 +27,25 @@ namespace Database.Repositories
 
         public Organization Create(Organization item)
         {
-            var entity = _context.Organizations.Add(item).Entity;
+            var createOrganizationentity = _context.Organizations.Add(item).Entity;
             _context.SaveChanges();
-            return entity;
+            return createOrganizationentity;
         }
 
         public Organization Update(Organization item)
         {
-            var entity = _context.Entry(item).State = EntityState.Modified;
+            var updateOrganizationentity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return entity;
+            return updateOrganizationentity;
         }
 
         public Organization Delete(int id)
         {
             Organization organization = _context.Organizations.Find(id);
 
-            var entity = _context.Organizations.Remove(organization).Entity;
+            var deleteOrganizationentity = _context.Organizations.Remove(organization).Entity;
             _context.SaveChanges();
-            return entity;
+            return deleteOrganizationentity;
         }
     }
 }
