@@ -25,16 +25,18 @@ namespace Database.Repositories
                 .FirstOrDefault(business => business.Id == id);
         }
 
-        public void Create(Business item)
+        public Business Create(Business item)
         {
-            _context.Businesses.Add(item);
+            var entity =_context.Businesses.Add(item).Entity;
             _context.SaveChanges();
+            return entity;
         }
 
         public void Update(Business item)
         {
-            _context.Entry(item).State = EntityState.Modified;
+            var entity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
+            return entity;
         }
 
         public Business Delete(int id)
