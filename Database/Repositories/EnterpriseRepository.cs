@@ -41,25 +41,25 @@ namespace Database.Repositories
 
         public Enterprise Create(Enterprise item)
         {
-           var entity =  _context.Enterprises.Add(item).Entity;
+           var createEnterprisesentity = _context.Enterprises.Add(item).Entity;
             _context.SaveChanges();
-            return entity;
+            return createEnterprisesentity;
         }
 
         public Enterprise Update(Enterprise item)
         {
-           var entity = _context.Entry(item).State = EntityState.Modified;
+           var updateEnterprisesentity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
-            return entity;
+            return updateEnterprisesentity;
         }
 
         public Enterprise Delete(int id)
         {
             Enterprise enterprise = _context.Enterprises.Find(id);
 
-            var entity = _context.Enterprises.Remove(enterprise).Entity;
+            var deleteEnterprisesentity = _context.Enterprises.Remove(enterprise).Entity;
             _context.SaveChanges();
-            return entity;
+            return deleteEnterprisesentity;
         }
     }
 }
