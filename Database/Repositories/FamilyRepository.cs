@@ -27,26 +27,26 @@ namespace Database.Repositories
 
         public Family Create(Family item)
         {
-            var entity = _context.Familys.Add(item).Entity;
+            var createFamilyentity = _context.Familys.Add(item).Entity;
             _context.SaveChanges();
-            return entity;
+            return createFamilyentity;
         }
 
         public Family Update(Family item)
         {
-            var entity = _context.Entry(item).State = EntityState.Modified;
+            var updateFamilyentity = _context.Entry(item).State = EntityState.Modified;
 
             _context.SaveChanges();
-            return entity;
+            return updateFamilyentity;
         }
 
         public Family Delete(int id)
         {
             Family family = _context.Familys.Find(id);
 
-            var entity = _context.Familys.Remove(family).Entity;
+            var deleteFamilyentity = _context.Familys.Remove(family).Entity;
             _context.SaveChanges();
-            return entity;
+            return deleteFamilyentity;
         }
     }
 }
