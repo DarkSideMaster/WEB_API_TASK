@@ -25,16 +25,18 @@ namespace Database.Repositories
                 .FirstOrDefault(department => department.Id == id);
         }
 
-        public void Create(Department item)
+        public Department Create(Department item)
         {
-            _context.Departments.Add(item);
+            var entity = _context.Departments.Add(item).Entity;
             _context.SaveChanges();
+            return entity;
         }
 
-        public void Update(Department item)
+        public Department Update(Department item)
         {
-            _context.Entry(item).State = EntityState.Modified;
+           var entity = _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
+            return entity;
         }
 
         public Department Delete(int id)
