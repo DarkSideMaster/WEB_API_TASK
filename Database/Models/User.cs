@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Database.Models
 {
     public class User
     {
-        public int Id { get; set; }
+        [Range(1, Int32.MaxValue)]
+        public int Id { get; set;}
         [Required(ErrorMessage = "Enter first name, please!")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Enter second name, please!")]
@@ -14,6 +16,7 @@ namespace Database.Models
         [Required(ErrorMessage = "Enter your adress, please!")]
         public string Adress { get; set; }
         public int DepartmentId { get; set; }
+
         public Department Department { get; set; }
     }
 }

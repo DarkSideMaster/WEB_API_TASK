@@ -28,6 +28,7 @@ namespace Database.Repositories
         public Organization Create(Organization item)
         {
             var createOrganizationentity = _context.Organizations.Add(item).Entity;
+
             _context.SaveChanges();
             return createOrganizationentity;
         }
@@ -44,8 +45,9 @@ namespace Database.Repositories
         {
             Organization organization = _context.Organizations.Find(id);
 
+            var deleteOrganizationentity = _context.Organizations.Remove(organization).Entity;
             _context.SaveChanges();
-            return _context.Organizations.Remove(organization).Entity; 
+            return deleteOrganizationentity;
         }
     }
 }

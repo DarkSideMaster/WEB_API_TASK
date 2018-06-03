@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Database;
@@ -34,56 +35,57 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Country item)
         {
-
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for add country");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_countryRepository.Create(item));
+            try
+            {
+                return Ok(_countryRepository.Create(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }
         }
 
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-            if (Id < 0)
-            {
-                ModelState.AddModelError("", "No data for deleting country");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-         
 
-            return Ok(_countryRepository.Delete(Id));
+            try
+            {
+                return Ok(_countryRepository.Delete(Id));
+            }
+            catch
+            {
+                return BadRequest(ModelState);
+            }
         }
 
         [Route("Update")]
         [HttpPost]
         public IActionResult Update(Country item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating country");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_countryRepository.Update(item));
+            try
+            {
+                return Ok(_countryRepository.Update(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }
         }
     }
 }

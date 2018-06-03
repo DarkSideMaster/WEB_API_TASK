@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Database;
@@ -11,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WEB_API_Task_WebApplication.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     public class BusinessController : Controller
     {
@@ -34,56 +35,56 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Business item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for creating Business");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            return Ok(_businessRepository.Create(item));
+            try
+            {
+                return Ok(_businessRepository.Create(item));
+            }
+            catch 
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }
         }
 
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-            if (Id < 0)
-            {
-                ModelState.AddModelError("", "No data for deleting business");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            _businessRepository.Delete(Id);
 
-            return Ok(_businessRepository.Delete(Id));
+            try
+            {
+                return Ok(_businessRepository.Delete(Id));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }
         }
 
         [Route("Update")]
         [HttpPost]
         public IActionResult Update(Business item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating Business");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_businessRepository.Update(item));
+            try
+            {
+                return Ok(_businessRepository.Update(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }
         }
-
     }
 }

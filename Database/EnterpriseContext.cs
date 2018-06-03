@@ -24,26 +24,29 @@ namespace Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Country>()
-                .HasIndex(c => c.Name)
+                .HasIndex(c => c.Id)
                 .IsUnique();
             modelBuilder.Entity<Department>()
-                .HasIndex(c => c.Name)
+                .HasIndex(c => c.Id)
                 .IsUnique();
             modelBuilder.Entity<Family>()
-                .HasIndex(c => c.Name)
+                .HasIndex(c => c.Id)
                 .IsUnique();
             modelBuilder.Entity<Organization>()
-                .HasIndex(c => c.Name)
+                .HasIndex(c => c.Id)
                 .IsUnique();
             modelBuilder.Entity<Enterprise>()
-                .HasIndex(c => c.Name)
+                .HasIndex(c => c.Id)
                 .IsUnique();
             modelBuilder.Entity<Offering>()
-                .HasIndex(c => c.Name)
+                .HasIndex(c => c.Id)
                 .IsUnique();
                  modelBuilder.Entity<Business>()
-                .HasIndex(c => c.Name)
-                .IsUnique();             
+                .HasIndex(c => c.Id)
+                .IsUnique();
+            modelBuilder.Entity<User>()
+                .HasIndex(c => c.Id)
+                .IsUnique();
         }
     }
 }

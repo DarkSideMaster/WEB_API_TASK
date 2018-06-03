@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Database;
@@ -21,7 +22,6 @@ namespace WEB_API_Task_WebApplication.Controllers
             _userRepository = new UserRepository(context);
         }
 
-
         [Route("All")]
         [AllowAnonymous]
         [HttpGet]
@@ -34,54 +34,60 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(User item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for creating user");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_userRepository.Create(item));
+            try
+            {
+                return Ok(_userRepository.Create(item));
+            }
+
+            catch
+            {            
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
 
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-            if (Id < 0)
-            {
-                ModelState.AddModelError("", "No data for deleting user");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_userRepository.Delete(Id));
+            try
+            {
+                return Ok(_userRepository.Delete(Id));
+            }
+
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
 
         [Route("Update")]
         [HttpPost]
         public IActionResult Update(User item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating user");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }         
+            }
 
-            return Ok(_userRepository.Update(item));
+            try
+            {
+                return Ok(_userRepository.Update(item));
+            }
+
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
     }
 }

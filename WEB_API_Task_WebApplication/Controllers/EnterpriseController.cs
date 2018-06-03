@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WEB_API_Task_WebApplication.Controllers
 {
-    [Authorize]
+   // [Authorize]
     [Route("api/[controller]")]
     public class EnterpriseController : Controller
     {
@@ -22,8 +22,7 @@ namespace WEB_API_Task_WebApplication.Controllers
         {
             _enterpriseRepository = new EnterpriseRepository(context);
         }
-
-      
+  
         [Route("All")]
         [AllowAnonymous]
         [HttpGet]
@@ -43,55 +42,56 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Enterprise item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for creating enterprise");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-          
 
-            return Ok(_enterpriseRepository.Create(item));
+            try
+            {
+                return Ok(_enterpriseRepository.Create(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }       
         }
 
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-            if (Id < 0)
-            {
-                ModelState.AddModelError("", "No data for deleting enterprise");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_enterpriseRepository.Delete(Id));
+            try
+            {
+                return Ok(_enterpriseRepository.Delete(Id));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
 
         [Route("Update")]
         [HttpPost]
         public IActionResult Update(Enterprise item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating enterprise");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-        
-            return Ok(_enterpriseRepository.Update(item));
+            try
+            {
+                return Ok(_enterpriseRepository.Update(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
     }
 }

@@ -34,56 +34,57 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Family item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for creating family");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_familyRepository.Create(item));
+            try
+            {
+                return Ok(_familyRepository.Create(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
 
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-
-            if (Id < 0)
-            {
-                ModelState.AddModelError("", "No data for deleting family");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_familyRepository.Delete(Id));
+            try
+            {
+                return Ok(_familyRepository.Delete(Id)); //or you can throw new Exception
+            }
+            catch
+            {
+                return BadRequest(ModelState);
+            }
         }
 
         [Route("Update")]
         [HttpPost]
         public IActionResult Update(Family item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating family");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_familyRepository.Update(item));
-
+            try
+            {
+                return Ok(_familyRepository.Update(item)); //or you can throw new Exception
+            }
+            catch
+            {
+                return BadRequest(ModelState);
+            }
         }
     }
 }

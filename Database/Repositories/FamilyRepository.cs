@@ -45,8 +45,9 @@ namespace Database.Repositories
         {
             Family family = _context.Familys.Find(id);
 
+            var deleteFamilyentity = _context.Familys.Remove(family).Entity;
             _context.SaveChanges();
-            return _context.Familys.Remove(family).Entity;
+            return deleteFamilyentity;
         }
     }
 }

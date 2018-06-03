@@ -28,6 +28,7 @@ namespace Database.Repositories
         public Offering Create(Offering item)
         {
             var createOfferingentity = _context.Offerings.Add(item).Entity;
+
             _context.SaveChanges();
             return createOfferingentity;
         }
@@ -35,17 +36,18 @@ namespace Database.Repositories
         public Offering Update(Offering item)
         {
             _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
 
+            _context.SaveChanges();
             return _context.Entry(item).Entity;
         }
 
         public Offering Delete(int id)
         {
             Offering offering = _context.Offerings.Find(id);
-        
+
+            var deleteOfferingentity = _context.Offerings.Remove(offering).Entity;
             _context.SaveChanges();
-            return _context.Offerings.Remove(offering).Entity; 
+            return deleteOfferingentity; 
         }
     }
 }

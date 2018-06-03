@@ -33,55 +33,57 @@ namespace WEB_API_Task_WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Offering item)
         {
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for creating offering");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-         
-            return Ok(_offeringRepository.Create(item));
+
+            try
+            {
+                return Ok(_offeringRepository.Create(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
 
         [Route("Delete")]
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-            if (Id < 0)
-            {
-                ModelState.AddModelError("", "No data for deleting offering");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_offeringRepository.Delete(Id));
+            try
+            {
+                return Ok(_offeringRepository.Delete(Id));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
 
         [Route("Update")]
         [HttpPost]
         public IActionResult Update(Offering item)
         {
-
-            if (item == null)
-            {
-                ModelState.AddModelError("", "No data for updating offering");
-                return BadRequest(ModelState);
-            }
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(_offeringRepository.Update(item));
+            try
+            {
+                return Ok(_offeringRepository.Update(item));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or you can throw new Exception
+            }
         }
     }
 }

@@ -59,8 +59,9 @@ namespace Database.Repositories
         {
             Enterprise enterprise = _context.Enterprises.Find(id);
 
+            var deleteEnterprisesentity = _context.Enterprises.Remove(enterprise).Entity;
             _context.SaveChanges();
-            return _context.Enterprises.Remove(enterprise).Entity; 
+            return deleteEnterprisesentity;
         }
     }
 }

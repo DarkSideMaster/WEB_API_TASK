@@ -35,6 +35,7 @@ namespace Database.Repositories
         public Country Update(Country item)
         {
             _context.Entry(item).State = EntityState.Modified;
+
             _context.SaveChanges();
             return _context.Entry(item).Entity;
         }
@@ -43,8 +44,9 @@ namespace Database.Repositories
         {
             Country country = _context.Сountries.Find(id);
 
+            var deleteCountryentity = _context.Сountries.Remove(country).Entity;
             _context.SaveChanges();
-            return _context.Сountries.Remove(country).Entity; 
+            return deleteCountryentity; 
         }
     }
 }
