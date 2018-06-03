@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WEB_API_Task.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     public class BusinessController : Controller
     {
