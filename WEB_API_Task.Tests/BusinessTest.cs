@@ -17,11 +17,11 @@ namespace WEB_API_Task.Tests
             // var controller = new BusinessController(new EnterpriseContext(new DbContextOptions<EnterpriseContext>()));  
             //   var result = controller.GetBuisnesses();     
 
-            //var responseString = response.Content.ReadAsString().Result;
+            var responseString = response.Content.ReadAsString().Result;
 
-            //dynamic jsonObject = JObject.Parse(responseString);
-            //int Id = (int)jsonObject.Id;
-            //Assert.Equal(1, Id);
+            dynamic jsonObject = JObject.Parse(responseString);
+            int Id = (int)jsonObject.Id;
+            Assert.Equal(1, Id);
 
         }
     }
