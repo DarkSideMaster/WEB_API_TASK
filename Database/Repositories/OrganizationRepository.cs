@@ -44,9 +44,8 @@ namespace Database.Repositories
         {
             Organization organization = _context.Organizations.Find(id);
 
-            var deleteOrganizationentity = _context.Organizations.Remove(organization).Entity;
             _context.SaveChanges();
-            return deleteOrganizationentity;
+            return _context.Organizations.Remove(organization).Entity; 
         }
     }
 }

@@ -28,6 +28,7 @@ namespace Database.Repositories
         public Family Create(Family item)
         {
             var createFamilyentity = _context.Familys.Add(item).Entity;
+
             _context.SaveChanges();
             return createFamilyentity;
         }
@@ -35,8 +36,8 @@ namespace Database.Repositories
         public Family Update(Family item)
         {
             _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
 
+            _context.SaveChanges();
             return _context.Entry(item).Entity;
         }
 
@@ -44,9 +45,8 @@ namespace Database.Repositories
         {
             Family family = _context.Familys.Find(id);
 
-            var deleteFamilyentity = _context.Familys.Remove(family).Entity;
             _context.SaveChanges();
-            return deleteFamilyentity;
+            return _context.Familys.Remove(family).Entity;
         }
     }
 }

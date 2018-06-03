@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using Database.Interfaces;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
@@ -39,13 +40,12 @@ namespace Database.Repositories
             return _context.Entry(item).Entity;
         }
 
-        public Business Delete(int id)
+        public Business  Delete(int id)
         {
-            Business business = _context.Businesses.Find(id);
-
-            var deleteBusinessentity = _context.Businesses.Remove(business).Entity;
+            Business business = _context.Businesses.Find(id);         
+            
             _context.SaveChanges();
-            return deleteBusinessentity;
+            return _context.Businesses.Remove(business).Entity;
         }
     }
 }

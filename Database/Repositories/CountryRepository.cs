@@ -43,9 +43,8 @@ namespace Database.Repositories
         {
             Country country = _context.Сountries.Find(id);
 
-            var deleteCountryentity = _context.Сountries.Remove(country).Entity;
             _context.SaveChanges();
-            return deleteCountryentity;
+            return _context.Сountries.Remove(country).Entity; 
         }
     }
 }

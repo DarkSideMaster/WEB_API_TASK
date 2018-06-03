@@ -42,10 +42,9 @@ namespace Database.Repositories
         public User Delete(int id)
         {
             User user = _context.Users.Find(id);
-
-            var deleteOrganizationentity = _context.Users.Remove(user).Entity;
+      
             _context.SaveChanges();
-            return deleteOrganizationentity;
+            return _context.Users.Remove(user).Entity; 
         }
     }
 }

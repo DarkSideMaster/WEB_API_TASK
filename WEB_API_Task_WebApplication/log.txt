@@ -305,3 +305,420 @@ Saved 1 entities to in-memory store.
 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Update (WEB_API_Task_WebApplication) in 9.5128ms
 Request finished in 27.9395ms 200 application/json; charset=utf-8
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 289.9667ms
+Request finished in 674.8211ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 61.454ms
+Request finished in 74.2062ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 110.1694ms
+Request finished in 338.249ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Update application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Update (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+An exception occurred in the database while saving changes for context type 'Database.EnterpriseContext'.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Attempted to update or delete an entity that does not exist in the store.
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryTable`1.Update(IUpdateEntry entry)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryStore.ExecuteTransaction(IEnumerable`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 125.883ms
+Request finished in 363.2414ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/All application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Request finished in 10.0933ms 404 
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 30.9365ms
+Request finished in 46.5877ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 128.2165ms
+Request finished in 374.8494ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/All application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Request finished in 47.7402ms 404 
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 40.6261ms
+Request finished in 65.4584ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 4
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 119.8306ms
+Request finished in 329.4287ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 34.6278ms
+Request finished in 103.696ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 10.0178ms
+Request finished in 21.631ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/All application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Request finished in 5.1056ms 404 
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 11.361ms
+Request finished in 52.2919ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 27.665ms
+Request finished in 35.9359ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 12.3273ms
+Request finished in 29.4517ms 200 application/json; charset=utf-8
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 133.0658ms
+Request finished in 365.9041ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 27.1907ms
+Request finished in 37.5149ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 23.4256ms
+Request finished in 32.746ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 13.4397ms
+Request finished in 33.8472ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 13.2296ms
+Request finished in 34.8388ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 6.9256ms
+Request finished in 26.2206ms 200 application/json; charset=utf-8
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 148.6749ms
+Request finished in 378.6244ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 38.3461ms
+Request finished in 53.4534ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 130.2115ms
+Request finished in 369.6343ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 30.0064ms
+Request finished in 52.5605ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 28.397ms
+Request finished in 41.2475ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/all application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 13.4268ms
+Request finished in 22.1196ms 200 application/json; charset=utf-8
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/all application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 106.289ms
+Request finished in 317.6548ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 37.4286ms
+Request finished in 78.9766ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 32.05ms
+Request finished in 39.0617ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Request finished in 16.445ms 404 
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 34.2343ms
+Request finished in 49.9259ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 35.2396ms
+Request finished in 42.9025ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 9.9593ms
+Request finished in 34.009ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 10.6448ms
+Request finished in 19.1691ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Update application/x-www-form-urlencoded 24
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Update (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Update (WEB_API_Task_WebApplication) in 17.0754ms
+Request finished in 34.3964ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 11.9575ms
+Request finished in 19.9411ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 4
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 17.0634ms
+Request finished in 99.0927ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 10.6948ms
+Request finished in 17.7583ms 200 application/json; charset=utf-8
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 157.1419ms
+Request finished in 409.0112ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 25.3864ms
+Request finished in 38.2969ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 128.2136ms
+Request finished in 357.4366ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 27.8771ms
+Request finished in 54.8276ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 23.662ms
+Request finished in 32.521ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 10.0614ms
+Request finished in 18.0895ms 200 application/json; charset=utf-8
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Create application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Create (WEB_API_Task_WebApplication) in 146.9786ms
+Request finished in 379.6841ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/All application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 36.4414ms
+Request finished in 50.509ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/Business/Delete application/x-www-form-urlencoded 22
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) with arguments (2) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.Delete (WEB_API_Task_WebApplication) in 30.5415ms
+Request finished in 40.354ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/Business/all application/x-www-form-urlencoded 
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.0.3-rtm-10026 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task_WebApplication.Controllers.BusinessController.GetBuisnesses (WEB_API_Task_WebApplication) in 7.1179ms
+Request finished in 14.77ms 200 application/json; charset=utf-8

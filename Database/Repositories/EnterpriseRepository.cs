@@ -42,6 +42,7 @@ namespace Database.Repositories
         public Enterprise Create(Enterprise item)
         {
             var createEnterprisesentity = _context.Enterprises.Add(item).Entity;
+
             _context.SaveChanges();
             return createEnterprisesentity;
         }
@@ -49,6 +50,7 @@ namespace Database.Repositories
         public Enterprise Update(Enterprise item)
         {
             _context.Entry(item).State = EntityState.Modified;
+
             _context.SaveChanges();
             return _context.Entry(item).Entity;
         }
@@ -57,9 +59,8 @@ namespace Database.Repositories
         {
             Enterprise enterprise = _context.Enterprises.Find(id);
 
-            var deleteEnterprisesentity = _context.Enterprises.Remove(enterprise).Entity;
             _context.SaveChanges();
-            return deleteEnterprisesentity;
+            return _context.Enterprises.Remove(enterprise).Entity; 
         }
     }
 }

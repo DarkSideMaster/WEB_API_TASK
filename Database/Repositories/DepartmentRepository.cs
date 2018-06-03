@@ -43,10 +43,9 @@ namespace Database.Repositories
         public Department Delete(int id)
         {
             Department department = _context.Departments.Find(id);
-
-            var deleteDepartmententity = _context.Departments.Remove(department).Entity;
+   
             _context.SaveChanges();
-            return deleteDepartmententity;
+            return _context.Departments.Remove(department).Entity;
         }
     }
 }

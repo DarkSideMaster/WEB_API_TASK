@@ -43,11 +43,9 @@ namespace Database.Repositories
         public Offering Delete(int id)
         {
             Offering offering = _context.Offerings.Find(id);
-
-            var deleteOfferingentity = _context.Offerings.Remove(offering).Entity;
+        
             _context.SaveChanges();
-
-            return deleteOfferingentity;
+            return _context.Offerings.Remove(offering).Entity; 
         }
     }
 }
