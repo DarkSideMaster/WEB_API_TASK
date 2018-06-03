@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using WEB_API_Task;
 
 
-namespace WEB_API_Task_WebApplication
+namespace WEB_API_Task
 {
     public class Program
     {

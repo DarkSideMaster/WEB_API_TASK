@@ -2,7 +2,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
  
-namespace WEB_API_Task_WebApplication.Loggers
+namespace WEB_API_Task.Loggers
 {
     public class FileLogger : ILogger
     {

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace WEB_API_Task_WebApplication.Controllers
+namespace WEB_API_Task.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]

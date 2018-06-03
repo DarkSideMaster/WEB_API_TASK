@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Logging;
- 
-namespace WEB_API_Task_WebApplication.Loggers
+using WEB_API_Task.Loggers;
+
+namespace WEB_API_Task.Loggers
 {
     public static class FileLoggerExtensions
     {

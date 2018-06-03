@@ -12,9 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using WEB_API_Task_WebApplication.Loggers;
+using WEB_API_Task.Loggers;
 
-namespace WEB_API_Task_WebApplication
+namespace WEB_API_Task
 {
     public class Startup
     {

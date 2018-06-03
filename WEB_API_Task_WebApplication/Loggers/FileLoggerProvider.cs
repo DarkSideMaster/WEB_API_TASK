@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Extensions.Logging;
  
-namespace WEB_API_Task_WebApplication.Loggers
+namespace WEB_API_Task.Loggers
 {
     public class FileLoggerProvider : ILoggerProvider
     {
