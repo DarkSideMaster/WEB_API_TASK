@@ -1,7 +1,7 @@
 
-## WEB API (.NET Core) hierarchical tree 
+## Web API (.NET Core) hierarchical tree 
 
-This WEB API was created use .NET Core technology. And can help you create a hierarchical tree structure to organize your assets in your enterprise.  In response you will receive a JSON of the following structure:
+This Web API was created use .NET Core technology. And can help you create a hierarchical tree structure to organize your assets in your enterprise.  In response you will receive a JSON of the following structure:
 
 ```json
  "id": 1,
