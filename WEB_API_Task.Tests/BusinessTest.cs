@@ -1,6 +1,10 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using Database;
+using Database.Interfaces;
+using Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WEB_API_Task.Controllers;
@@ -16,7 +20,7 @@ namespace WEB_API_Task.Tests
         public void GetBusinessReturnsListOfBusiness()
         {
             // Arrange
-            var mock = new Mock<IRepository>();
+            var mock = new Mock<IRepository<Business>>();
             mock.Setup(repo=>repo.GetAll()).Returns(GetTestBusiness());
             var controller = new BusinessController(mock.Object);
  
@@ -34,9 +38,9 @@ namespace WEB_API_Task.Tests
         {
             var business = new List<Business>
             {
-                new Business { Id=1, Name="New Business",   CountryId="342"},
-                new Business { Id=2, Name="New Business 2,  CountryId="453"},
-                new Business { Id=3, Name="New Business 3", CountryId="778"},
+                new Business { Id=1, Name="New Business",   CountryId=342},
+                new Business { Id=2, Name="New Business 2", CountryId=453},
+                new Business { Id=3, Name="New Business 3", CountryId=778},
             };
             return business;
         }       
