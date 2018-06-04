@@ -17,32 +17,29 @@ namespace WEB_API_Task.Tests
         {
             // Arrange
             var mock = new Mock<IRepository>();
-            mock.Setup(repo=>repo.GetAll()).Returns(GetTestPhones());
-            var controller = new HomeController(mock.Object);
+            mock.Setup(repo=>repo.GetAll()).Returns(GetTestBusiness());
+            var controller = new BusinessController(mock.Object);
  
             // Act
-            var result = controller.Index();
+            var result = controller.GetBuisnesses();
  
             // Assert
             var viewResult = Assert.IsType<ViewResult>(result);
-            var model = Assert.IsAssignableFrom<IEnumerable<Phone>>(viewResult.Model);
-            Assert.Equal(GetTestPhones().Count, model.Count());
+            var model = Assert.IsAssignableFrom<IEnumerable<Business>>(viewResult.Model);
+            Assert.Equal(GetTestBusiness().Count, model.Count());
         }
+               
         
-        
-        
-        private List<Phone> GetTestPhones()
+        private List<Business> GetTestBusiness()
         {
-            var phones = new List<Phone>
+            var business = new List<Business>
             {
-                new Phone { Id=1, Name="iPhone 7", Company="Apple", Price=900},
-                new Phone { Id=2, Name="Meizu 6 Pro", Company="Meizu", Price=300},
-                new Phone { Id=3, Name="Mi 5S", Company="Xiaomi", Price=400},
-                new Phone { Id=4, Name="iPhone 7", Company="Apple", Price=900},
+                new Business { Id=1, Name="New Business", CountryId="342"},
+                new Business { Id=2, Name="New Business 2, CountryId="453"},
+                new Business{ Id=3, Name="New Business 3", CountryId="778"},
             };
-            return phones;
+            return business;
         }
-                        
-        
+                                
     }
 }
