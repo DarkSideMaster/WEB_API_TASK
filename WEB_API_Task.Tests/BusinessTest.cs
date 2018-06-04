@@ -24,9 +24,9 @@ namespace WEB_API_Task.Tests
             var result = controller.GetBuisnesses();
  
             // Assert
-            var viewResult = Assert.IsType<Business>(result);
-            var model = Assert.IsAssignableFrom<IEnumerable<Business>>(viewResult.Model);
-            Assert.Equal(GetTestBusiness().Count, model.Count());
+            var businessResult = Assert.IsType<Business>(result);
+            var businessassert = Assert.IsAssignableFrom<IEnumerable<Business>>(businessResult.Model);
+            Assert.Equal(GetTestBusiness().Count, businessassert.Count());
         }
                
         
@@ -34,8 +34,8 @@ namespace WEB_API_Task.Tests
         {
             var business = new List<Business>
             {
-                new Business { Id=1, Name="New Business",  CountryId="342"},
-                new Business { Id=2, Name="New Business 2, CountryId="453"},
+                new Business { Id=1, Name="New Business",   CountryId="342"},
+                new Business { Id=2, Name="New Business 2,  CountryId="453"},
                 new Business { Id=3, Name="New Business 3", CountryId="778"},
             };
             return business;
