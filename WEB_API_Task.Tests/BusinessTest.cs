@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WEB_API_Task.Controllers;
 using Xunit;
+using Moq;
 using Newtonsoft.Json.Linq;
 
 namespace WEB_API_Task.Tests
