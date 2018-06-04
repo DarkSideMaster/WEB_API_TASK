@@ -39,6 +39,6 @@ namespace WEB_API_Task.Tests
                 new Business { Id=3, Name="New Business 3", CountryId="778"},
             };
             return business;
-        }                                
+        }       
     }
 }
