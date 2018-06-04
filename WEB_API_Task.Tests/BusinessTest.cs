@@ -25,6 +25,7 @@ namespace WEB_API_Task.Tests
             mockContext.Setup(context => new EnterpriseContext(new DbContextOptions<EnterpriseContext>()));
             var  controller = new BusinessController(mockContext.Object);
             int expectedBusinessCount = 1;
+
             // Act
 
             var actionResult = controller.GetBuisnesses();
