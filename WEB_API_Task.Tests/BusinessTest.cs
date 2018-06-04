@@ -20,29 +20,22 @@ namespace WEB_API_Task.Tests
         public void GetBusinessReturnsListOfBusiness()
         {
             // Arrange
-            var mock = new Mock<IRepository<Business>>();
-            mock.Setup(repo=>repo.GetAll()).Returns(GetTestBusiness());
-            var controller = new BusinessController(mock.Object);
- 
+
+            var mockContext = new Mock<EnterpriseContext>();
+            mockContext.Setup(context => new EnterpriseContext(new DbContextOptions<EnterpriseContext>()));
+            var  controller = new BusinessController(mockContext.Object);
+            int expectedBusinessCount = 1;
             // Act
-            var result = controller.GetBuisnesses();
- 
+
+            var actionResult = controller.GetBuisnesses();
+
             // Assert
-            var businessResult = Assert.IsType<Business>(result);
-            var businessassert = Assert.IsAssignableFrom<IEnumerable<Business>>(businessResult.Model);
-            Assert.Equal(GetTestBusiness().Count, businessassert.Count());
+
+            //Assert.NotNull(result);
+            //Assert.IsType<Business>(result);
+            //Assert.Equal(expectedBusinessCount,result);
         }
-               
-        
-        private List<Business> GetTestBusiness()
-        {
-            var business = new List<Business>
-            {
-                new Business { Id=1, Name="New Business",   CountryId=342},
-                new Business { Id=2, Name="New Business 2", CountryId=453},
-                new Business { Id=3, Name="New Business 3", CountryId=778},
-            };
-            return business;
-        }       
+
+
     }
 }
