@@ -27,16 +27,20 @@ namespace WEB_API_Task.Tests
             int expectedBusinessCount = 1;
 
             // Act
-
-            var actionResult = controller.GetBuisnesses();
-
-            // Assert
-
-            //Assert.NotNull(result);
-            //Assert.IsType<Business>(result);
-            //Assert.Equal(expectedBusinessCount,result);
+            IActionResult actionResult = controller.GetBuisnesses();
+            var okObjectResult = result as OkObjectResult;
+           // var presentations = okObjectResult.Value as IEnumerable<Models.Business>;
+          
+         
+            // Assert         
+          //   Assert.IsNotNull(presentations);
+             Assert.IsNotNull(okObjectResult);
+             Assert.IsType<Business>(okObjectResult);
+             Assert.Equal(expectedBusinessCount, okObjectResult);           
+          // Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
+            //  presentations.Count());
+                    
+            
         }
-
-
     }
 }
