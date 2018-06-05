@@ -53,7 +53,7 @@ namespace Database
         //{
         //    if (!optionsBuilder.IsConfigured)
         //    {
-        //        optionsBuilder.UseInMemoryDatabase();
+        //        optionsBuilder.UseInMemoryDatabase("Enterprise");
         //    }
         //}
     }
