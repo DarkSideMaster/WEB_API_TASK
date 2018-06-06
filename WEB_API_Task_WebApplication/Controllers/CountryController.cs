@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 
 namespace WEB_API_Task.Controllers
 {
@@ -84,6 +85,27 @@ namespace WEB_API_Task.Controllers
             }
             catch
             {
+                return BadRequest(ModelState); //or can throw new Exception
+            }
+        }
+
+        [Route("Filter")]
+        [HttpPost]
+        public IActionResult Filter(string name)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+
+                return Ok(_countryRepository.FilterCountry(name));
+            }
+            catch
+            {
+
                 return BadRequest(ModelState); //or can throw new Exception
             }
         }

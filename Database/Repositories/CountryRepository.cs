@@ -4,6 +4,7 @@ using System.Linq;
 using Database.Interfaces;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
+using Remotion.Linq.Clauses;
 
 namespace Database.Repositories
 {
@@ -46,7 +47,14 @@ namespace Database.Repositories
 
             var deleteCountryentity = _context.Сountries.Remove(country).Entity;
             _context.SaveChanges();
-            return deleteCountryentity; 
+            return deleteCountryentity;
+        }
+
+
+        public Country FilterCountry(string name)
+        {
+            return _context.Сountries
+                .FirstOrDefault(country => country.Name == name);
         }
     }
 }
