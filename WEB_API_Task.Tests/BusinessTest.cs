@@ -33,14 +33,14 @@ namespace WEB_API_Task.Tests
             var okObjectResult = actionResult as OkobjectResult;
             var valueresult = okObjectResult.Value as IEnumerable<Business>;
                  
-            // Assert
+           // Assert
             
-           //  Assert.IsNotNull(valueresult);
-           //  Assert.IsNotNull(okObjectResult);
-           //  Assert.IsType<Business>(okObjectResult);
-           //  Assert.AreEqual(1, context.Blogs.Count());       
-          // Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
-          // presentations.Count());                             
+          //  Assert.IsNotNull(valueresult);
+          //  Assert.IsNotNull(okObjectResult);
+          //  Assert.IsType<Business>(okObjectResult);
+          //  Assert.AreEqual(1, context.Blogs.Count());       
+          //  Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
+          //  presentations.Count());                             
         }
     }
 }
