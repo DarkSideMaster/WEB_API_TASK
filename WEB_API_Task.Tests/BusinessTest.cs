@@ -30,7 +30,7 @@ namespace WEB_API_Task.Tests
             // Act
             IActionResult actionResult = controller.GetBusiness();
             var okObjectResult = actionResult as OkobjectResult;
-            var valueresult = okObjectResult.Value as Ienumerable<Business>;
+            var valueresult = okObjectResult.Value as IEnumerable<Business>;
           
          
             // Assert
