@@ -39,7 +39,7 @@ namespace WEB_API_Task.Tests
               Assert.IsNotNull(okObjectResult);
               Assert.IsType<Business>(okObjectResult);
            // Assert.Equal(expectedBusinessCount, okObjectResult);           
-          // Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
+          //  Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
           //  presentations.Count());
                     
             
