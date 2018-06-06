@@ -33,10 +33,11 @@ namespace WEB_API_Task.Tests
             var valueresult = okObjectResult.Value as Ienumerable<Business>;
           
          
-            // Assert         
-            // Assert.IsNotNull(presentations);
-            // Assert.IsNotNull(okObjectResult);
-           //  Assert.IsType<Business>(okObjectResult);
+            // Assert
+            
+              Assert.IsNotNull(valueresult);
+              Assert.IsNotNull(okObjectResult);
+              Assert.IsType<Business>(okObjectResult);
            //  Assert.Equal(expectedBusinessCount, okObjectResult);           
           // Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
           //  presentations.Count());
