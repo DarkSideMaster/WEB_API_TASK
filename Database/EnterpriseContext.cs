@@ -48,13 +48,5 @@ namespace Database
                 .HasIndex(c => c.Id)
                 .IsUnique();
         }
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder.UseInMemoryDatabase("Enterprise");
-        //    }
-        //}
     }
 }

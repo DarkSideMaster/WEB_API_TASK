@@ -21,26 +21,22 @@ namespace WEB_API_Task.Tests
         {
             // Arrange
 
-            var options = new DbContextOptionsBilder<EnterpriseContext>().UseinMemoryDatabase(databaseName: "Enterprise").Options;
+            var options = new DbContextOptionsBuilder<EnterpriseContext>().UseInMemoryDatabase("Enterprise").Options;
             var context = new EnterpriseContext(options);
-            context.Business.Add(new Business{Id = 2, Name = "New Business"});
+            context.Businesses.Add(new Business{Id = 2, Name = "New Business"});
             var controller = new BusinessController(context);
-            int expectedBusinessCount = 1;
-
+   
             // Act
             
-            IActionResult actionResult = controller.GetBusiness();
-            var okObjectResult = actionResult as OkobjectResult;
+            IActionResult actionResult = controller.GetBuisnesses();
+            var okObjectResult = actionResult as OkObjectResult;
             var valueresult = okObjectResult.Value as IEnumerable<Business>;
-                 
-           // Assert
-            
-          //  Assert.IsNotNull(valueresult);
-          //  Assert.IsNotNull(okObjectResult);
-          //  Assert.IsType<Business>(okObjectResult);
-          //  Assert.AreEqual(1, context.Blogs.Count());       
-          //  Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
-          //  presentations.Count());                             
+           
+            // Assert
+
+            Assert.NotNull(valueresult);
+            Assert.NotNull(okObjectResult);
+            Assert.Equal(200, okObjectResult.StatusCode);                              
         }
     }
 }
