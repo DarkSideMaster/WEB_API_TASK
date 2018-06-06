@@ -28,19 +28,19 @@ namespace WEB_API_Task.Tests
             int expectedBusinessCount = 1;
 
             // Act
+            
             IActionResult actionResult = controller.GetBusiness();
             var okObjectResult = actionResult as OkobjectResult;
             var valueresult = okObjectResult.Value as IEnumerable<Business>;
-          
-         
+                 
             // Assert
             
-              Assert.IsNotNull(valueresult);
-              Assert.IsNotNull(okObjectResult);
-              Assert.IsType<Business>(okObjectResult);
-           // Assert.Equal(expectedBusinessCount, okObjectResult);           
-          //  Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
-          //  presentations.Count());
+             Assert.IsNotNull(valueresult);
+             Assert.IsNotNull(okObjectResult);
+             Assert.IsType<Business>(okObjectResult);
+          // Assert.Equal(expectedBusinessCount, okObjectResult);           
+          // Assert.AreEqual(presentations.Select(g => g.Id).Intersect(gs1Data.Select(d => d.Id)).Count(),
+          // presentations.Count());
                               
         }
     }
