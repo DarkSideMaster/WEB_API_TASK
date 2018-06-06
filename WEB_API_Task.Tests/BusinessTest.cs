@@ -23,8 +23,8 @@ namespace WEB_API_Task.Tests
 
             var options = new DbContextOptionsBilder<EnterpriseContext>().UseinMemoryDatabase(databaseName: "Enterprise").Options;
             var context = new EnterpriseContext(options);
-            context.Business.Add(new Business{Name = "New Business"});
-            var controller = new BusinessController(context);
+            var context2 = context.Business.Add(new Business{Name = "New Business"});
+            var controller = new BusinessController(context2);
             int expectedBusinessCount = 1;
 
             // Act
