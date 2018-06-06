@@ -21,7 +21,7 @@ namespace WEB_API_Task.Tests
         {
             // Arrange
 
-            var options = new DbContextOptionsBilder<EnterpriseContext>().UseinMemoryDatabase("Enterprise").Options;
+            var options = new DbContextOptionsBilder<EnterpriseContext>().UseinMemoryDatabase(databaseName: "Enterprise").Options;
             var context = new EnterpriseContext(options);
             context.Business.Add(new Business{Name = "New Business"});
             var controller = new BusinessController(context);
