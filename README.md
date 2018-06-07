@@ -1,7 +1,9 @@
 
 ## Web API (.NET Core) hierarchical tree 
 
-This Web API was created use .NET Core technology. And can help you create a hierarchical tree structure to organize your assets in your enterprise.  In response you will receive a JSON of the following structure:
+This Web API was created use .NET Core technology. And can help you create a hierarchical tree structure to organize your assets in your enterprise. Also, you can use CRUD operations(auth required with your Google account) and filtering your entitys. 
+
+In response you will receive a JSON of the following structure:
 
 ```json
  "id": 1,
@@ -178,6 +180,30 @@ Deleting the existing entity in your Enterprise Tree.
     {
         "id": 1,
         "name": "Enterprise",
+        "organizations": null
+    }
+```
+
+## Filter
+
+Filtering the existing entity in your Enterprise Tree.
+
+**URL** : `api/Enterprise/Filter?Name=New Enterprise`
+
+**Method** : `POST`
+
+**Auth required** : NO
+
+## Success Response
+
+**Code** : `200 OK`
+
+**Content examples**
+
+```json
+    {
+        "id": 2,
+        "name": "New Enterprise",
         "organizations": null
     }
 ```
