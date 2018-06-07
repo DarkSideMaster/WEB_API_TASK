@@ -97,8 +97,7 @@ namespace WEB_API_Task.Controllers
             }
 
             try
-            {  
-            
+            {          
             var offering = new Offering();
             
             if (offering.Name != name)
