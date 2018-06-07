@@ -92,7 +92,7 @@ namespace WEB_API_Task.Controllers
         [HttpPost]
         public IActionResult Filter(string name)
         {       
-        Business business = new Business();
+        var business = new Business();
 
             if (!ModelState.IsValid)
             {
