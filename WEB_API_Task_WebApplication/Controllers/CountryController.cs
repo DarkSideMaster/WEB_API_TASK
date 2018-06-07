@@ -94,7 +94,7 @@ namespace WEB_API_Task.Controllers
         [HttpPost]
         public IActionResult Filter(string name)
         {       
-        Country country = new Country();
+        var country = new Country();
 
             if (!ModelState.IsValid)
             {
