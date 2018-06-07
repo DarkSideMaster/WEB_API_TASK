@@ -50,8 +50,7 @@ namespace Database.Repositories
             _context.SaveChanges();
             return deleteBusinessentity;
         }
-        
-        
+            
         public Business FilterBusiness(string name)
         {
                  return _context.Businesses
