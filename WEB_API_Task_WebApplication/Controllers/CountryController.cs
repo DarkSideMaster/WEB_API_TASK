@@ -101,8 +101,7 @@ namespace WEB_API_Task.Controllers
             }
 
             try
-            {
-                    
+            {                
             if (country.Name != name)
             {
                 return Content("Error");
