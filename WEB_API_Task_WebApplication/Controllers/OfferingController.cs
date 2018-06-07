@@ -85,5 +85,32 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState); //or you can throw new Exception
             }
         }
+        
+        [Route("Filter")]
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult Filter(string name)
+        {              
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {  
+            
+            var offering = new Offering();
+            
+            if (offering.Name != name)
+            {
+                return Content("Error");
+            }         
+                return Ok(_offeringRepository.FilterOffering(name));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }   
+        }                                       
     }
 }
