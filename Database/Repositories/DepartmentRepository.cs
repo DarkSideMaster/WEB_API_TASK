@@ -48,5 +48,12 @@ namespace Database.Repositories
             _context.SaveChanges();
             return deleteDepartmententity;
         }
+        
+        
+        public Department FilterDepartment(string name)
+        {
+            return _context.Departments            
+                .FirstOrDefault(department => department.Name == name);
+        }           
     }
 }
