@@ -100,12 +100,10 @@ namespace WEB_API_Task.Controllers
 
             try
             {
-
                 return Ok(_countryRepository.FilterCountry(name));
             }
             catch
             {
-
                 return BadRequest(ModelState); //or can throw new Exception
             }
         }
