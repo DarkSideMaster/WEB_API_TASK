@@ -49,5 +49,11 @@ namespace Database.Repositories
             _context.SaveChanges();
             return deleteOfferingentity; 
         }
+        
+        public Offering FilterOfferingy(string name)
+        {
+            return _context.Offerings
+                .FirstOrDefault(offering => offering.Name == name);
+        }            
     }
 }
