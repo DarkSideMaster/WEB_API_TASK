@@ -86,5 +86,33 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState); //or can throw new Exception
             }
         }
+        
+   [Route("Filter")]
+        [HttpPost]
+        public IActionResult Filter(string name)
+        {       
+        Business business = new Business();
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {                
+            if (business.Name != name)
+            {
+                return Content("Error");
+            }         
+                return Ok(_businessRepository.FilterBusiness(name));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }      
+        
+        
+        
+        
     }
 }
