@@ -92,7 +92,9 @@ namespace WEB_API_Task.Controllers
         [Route("Filter")]
         [HttpPost]
         public IActionResult Filter(string name)
-        {
+        {       
+        Country country = new Country();
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -100,6 +102,11 @@ namespace WEB_API_Task.Controllers
 
             try
             {
+                    
+            if (country.Name != name)
+            {
+                return Content("Error");
+            }         
                 return Ok(_countryRepository.FilterCountry(name));
             }
             catch
