@@ -49,5 +49,11 @@ namespace Database.Repositories
             _context.SaveChanges();
             return deleteFamilyentity;
         }
+        
+        public Family FilterFamily(string name)
+        {
+            return _context.Familys
+                .FirstOrDefault(family => family.Name == name);
+        }            
     }
 }
