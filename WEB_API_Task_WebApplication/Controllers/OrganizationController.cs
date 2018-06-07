@@ -96,19 +96,20 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
-            {          
-            var organization = new Oraganization();
-            
-            if (organization.Name != name)
+            var organizationfilter = _organizationRepository.Filter(name);
+
+            if (organizationfilter == null)
             {
-                return Content("Error");
-            }         
-                return Ok(_organizationRepository.FilterOrganization(name));
+                return Content("The organization is not found!");
+            }
+
+            try
+            {                        
+                return Ok(organizationfilter);
             }
             catch
             {
-                return BadRequest(ModelState); //or can throw new Exception
+                return BadRequest(ModelState); //or you can throw new Exception
             }   
         }                 
     }

@@ -98,15 +98,16 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState);
             }
 
+            var departmentfilter = _departmentRepository.Filter(name);
+
             try
             {  
-            var department = new Department();
             
-            if (department.Name != name)
+            if (departmentfilter == null)
             {
-                return Content("Error");
+                return Content("The department is not found!");
             }         
-                return Ok(_departmentRepository.FilterDepartment(name));
+                return Ok(departmentfilter);
             }
             catch
             {

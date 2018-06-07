@@ -1,0 +1,487 @@
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryfBxwYnGvZcjkG50a 142
+Google was not authenticated. Failure message: Not authenticated
+Authorization failed for user: (null).
+Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+Executing ChallengeResult with authentication schemes ().
+AuthenticationScheme: Google was challenged.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 115.0447ms
+Request finished in 416.62ms 302 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryY354e7cSTl5zFog4 142
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Invalid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 326.1566ms
+Request finished in 614.1824ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundarykSwwGyL2tnBJMB3J 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 54.7481ms
+Request finished in 100.5559ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) in 60.9514ms
+Request finished in 69.5439ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryuEAbbDASwCvO8W4w 142
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 8.9259ms
+Request finished in 31.1521ms 200 text/plain; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) in 16.7949ms
+Request finished in 38.294ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundary7iWlRXKAjejbNlhh 142
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 9.0804ms
+Request finished in 27.1667ms 200 text/plain; charset=utf-8
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundary0VfjBfq3X5Cy5pTX 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 289.6273ms
+Request finished in 572.0127ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundarytYBiD9wkfDQGsHDm 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundary1PvIwbgcXrAQlyBX 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 294.9415ms
+Request finished in 582.5071ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) in 61.7645ms
+Request finished in 71.5702ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryAKYYu6yFE5VA7IGq 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 93.1799ms
+Request finished in 102.5778ms 200 text/plain; charset=utf-8
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryA8ykoF3SlLomR90V 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 321.9626ms
+Request finished in 617.5935ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/%D1%84%D0%B4%D0%B4  
+Google was not authenticated. Failure message: Not authenticated
+Request finished in 24.3774ms 404 
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) in 63.5076ms
+Request finished in 71.9687ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryQ4q1JAJO3f8CnFgP 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundary6wnyNnYAh13LtUAd 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 308.0343ms
+Request finished in 593.5744ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryNAP4EX3ZgOejqiCI 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryPTnanrMm2vbUQe9T 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 319.5843ms
+Request finished in 608.0469ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryXQAiB4oBrNvQ0mot 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundary4e7euzKRjP89xbXh 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 304.0866ms
+Request finished in 592.1531ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryl88y3H9dkj5vkZ9q 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundary8UD59n1emwmjxO0s 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 293.9055ms
+Request finished in 567.6894ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryrw5LfaV29BO4YOTx 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/Country/Create multipart/form-data; boundary=----WebKitFormBoundaryv147mtE3b8tSe7EB 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 298.6074ms
+Request finished in 573.0083ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) in 64.8566ms
+Request finished in 77.9693ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/Filter multipart/form-data; boundary=----WebKitFormBoundaryEfXAiNJ91c9zhe67 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 83.5003ms
+Request finished in 97.0626ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/Filter multipart/form-data; boundary=----WebKitFormBoundaryjihqXthOkzbqkFLS 240
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austriahjkhjkhj) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryEwAh8PiL9WTNvFQu 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 327.8347ms
+Request finished in 641.9042ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/all multipart/form-data; boundary=----WebKitFormBoundarymPo9CprucrA2EFhD 232
+Google was not authenticated. Failure message: Not authenticated
+Request finished in 8.8914ms 404 
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) in 65.8525ms
+Request finished in 75.7188ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryRXY6ZQye3ywxoJQB 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 58.9271ms
+Request finished in 69.476ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundary72Q5s3BqniRK0yJ9 235
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austriaqqq) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryQK2QRzCczmnsMiVu 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 309.0349ms
+Request finished in 613.0777ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryDgjYAAuXaJv3qnoR 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 114.3701ms
+Request finished in 126.11ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryvnRAuZiJAoBKxU6s 235
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austriaqqq) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 68.5848ms
+Request finished in 78.9938ms 400 application/json; charset=utf-8
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundary3CVEKbPU6Z6drlPf 235
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 355.0179ms
+Request finished in 646.0303ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryBDwMXwPKm1ejeck4 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+An exception occurred in the database while saving changes for context type 'Database.EnterpriseContext'.
+System.ArgumentException: An item with the same key has already been added. Key: 2
+   at System.ThrowHelper.ThrowAddingDuplicateWithKeyArgumentException(Object key)
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryStore.ExecuteTransaction(IEnumerable`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 318.0591ms
+Request finished in 333.8933ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundary6RvkxAVoYEKOZK3k 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 27.3306ms
+Request finished in 43.6536ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryMMWB5PkL6dMOsTRh 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 114.7914ms
+Request finished in 124.7449ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundary01tE1OUHNXwB7AoV 235
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austriaccc) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 15.894ms
+Request finished in 34.8569ms 200 text/plain; charset=utf-8
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundaryH7gJMRLFbB6edp2Y 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 324.3157ms
+Request finished in 639.9715ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryUJ405TPwXpXW8xBH 234
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austriatt) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/create multipart/form-data; boundary=----WebKitFormBoundarytFyV0XTfgZBMlGLo 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) with arguments (Database.Models.Country) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Create (WEB_API_Task) in 366.6867ms
+Request finished in 685.6441ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:55000/api/country/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.GetCountryses (WEB_API_Task) in 74.5108ms
+Request finished in 119.9854ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundary7s9wEzAEOPIP4Ba6 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 57.8709ms
+Request finished in 90.6937ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryKrlQ8sV2zVbBQv0P 240
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austriafghfghfg) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 25.5081ms
+Request finished in 39.4962ms 200 text/plain; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/country/filter multipart/form-data; boundary=----WebKitFormBoundaryb7tDV8BeEl1QQ2XB 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) with arguments (Austria) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.CountryController.Filter (WEB_API_Task) in 12.6615ms
+Request finished in 77.4365ms 200 application/json; charset=utf-8
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/create multipart/form-data; boundary=----WebKitFormBoundaryXLj48tBmLLYMNw13 232
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) with arguments (Database.Models.Organization) - ModelState is Invalid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) in 259.3061ms
+Request finished in 544.1028ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/create multipart/form-data; boundary=----WebKitFormBoundaryNESQOimQxuGKEUZE 330
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) with arguments (Database.Models.Organization) - ModelState is Invalid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) in 11.5046ms
+Request finished in 41.8244ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/create multipart/form-data; boundary=----WebKitFormBoundaryyqMMkNvdeQeEZ8ce 512
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) with arguments (Database.Models.Organization) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+An exception occurred in the database while saving changes for context type 'Database.EnterpriseContext'.
+System.ArgumentException: An item with the same key has already been added. Key: 1
+   at System.ThrowHelper.ThrowAddingDuplicateWithKeyArgumentException(Object key)
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryStore.ExecuteTransaction(IEnumerable`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) in 151.8022ms
+Request finished in 164.6498ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/create multipart/form-data; boundary=----WebKitFormBoundaryZNm7aGX0kyYdBqcx 514
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) with arguments (Database.Models.Organization) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+An exception occurred in the database while saving changes for context type 'Database.EnterpriseContext'.
+System.ArgumentException: An item with the same key has already been added. Key: 1
+   at System.ThrowHelper.ThrowAddingDuplicateWithKeyArgumentException(Object key)
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryTable`1.Create(IUpdateEntry entry)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryStore.ExecuteTransaction(IEnumerable`1 entries, IDiagnosticsLogger`1 updateLogger)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) in 77.0067ms
+Request finished in 88.3683ms 400 application/json; charset=utf-8
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/create  0
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) with arguments (Database.Models.Organization) - ModelState is Invalid
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) in 196.785ms
+Request finished in 460.6897ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/create multipart/form-data; boundary=----WebKitFormBoundaryWzIGOCIzx7eyzeeV 518
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) with arguments (Database.Models.Organization) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.Create (WEB_API_Task) in 116.5099ms
+Request finished in 146.4336ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/all multipart/form-data; boundary=----WebKitFormBoundaryJjLqmuPZpnBdOoWu 518
+Google was not authenticated. Failure message: Not authenticated
+Request finished in 12.4052ms 404 
+Request starting HTTP/1.1 GET http://localhost:55000/api/organization/all  
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.GetOrganizations (WEB_API_Task) with arguments ((null)) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.GetOrganizations (WEB_API_Task) in 61.1348ms
+Request finished in 69.1237ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/filter multipart/form-data; boundary=----WebKitFormBoundaryZuSaqKr9Is0Shjl7 518
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Filter (WEB_API_Task) with arguments (new org) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.OrganizationController.Filter (WEB_API_Task) in 62.684ms
+Request finished in 76.7302ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/organization/filter multipart/form-data; boundary=----WebKitFormBoundarykybxQ4Cd3xhyHrEM 522
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.OrganizationController.Filter (WEB_API_Task) with arguments (new orgffff) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.OrganizationController.Filter (WEB_API_Task) in 44.8484ms
+Request finished in 52.8309ms 200 text/plain; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/enterprise/create multipart/form-data; boundary=----WebKitFormBoundaryVZmv1wHDB7KKzOm9 518
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.EnterpriseController.Create (WEB_API_Task) with arguments (Database.Models.Enterprise) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.EnterpriseController.Create (WEB_API_Task) in 23.4593ms
+Request finished in 48.4815ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/enterprise/filter multipart/form-data; boundary=----WebKitFormBoundaryTGRzf7GEfk89faAC 518
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.EnterpriseController.Filter (WEB_API_Task) with arguments (new org) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.EnterpriseController.Filter (WEB_API_Task) in 18.5184ms
+Request finished in 27.1591ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/enterprise/filter multipart/form-data; boundary=----WebKitFormBoundaryIWzw5neu8Y9UxigE 520
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.EnterpriseController.Filter (WEB_API_Task) with arguments (new orgff) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.EnterpriseController.Filter (WEB_API_Task) in 9.0058ms
+Request finished in 15.6082ms 200 text/plain; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/business/create multipart/form-data; boundary=----WebKitFormBoundarydSd143xKskvBVL0Z 518
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.BusinessController.Create (WEB_API_Task) with arguments (Database.Models.Business) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 1 entities to in-memory store.
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.BusinessController.Create (WEB_API_Task) in 23.1913ms
+Request finished in 50.5804ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/business/filter multipart/form-data; boundary=----WebKitFormBoundarysbHYOORbzdBUeden 518
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.BusinessController.Filter (WEB_API_Task) with arguments (new org) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+Executed action WEB_API_Task.Controllers.BusinessController.Filter (WEB_API_Task) in 17.0544ms
+Request finished in 26.9341ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:55000/api/business/filter multipart/form-data; boundary=----WebKitFormBoundaryAmR0u0qzMGd0nLBP 522
+Google was not authenticated. Failure message: Not authenticated
+Executing action method WEB_API_Task.Controllers.BusinessController.Filter (WEB_API_Task) with arguments (new orgjjjj) - ModelState is Valid
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+Executed action WEB_API_Task.Controllers.BusinessController.Filter (WEB_API_Task) in 10.619ms
+Request finished in 18.7279ms 200 text/plain; charset=utf-8
+Entity Framework Core 2.1.0-rtm-30799 initialized 'EnterpriseContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=Enterprise 
+Saved 8 entities to in-memory store.

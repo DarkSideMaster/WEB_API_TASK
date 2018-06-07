@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +42,7 @@ namespace WEB_API_Task.Controllers
             {
                 return Ok(_businessRepository.Create(item));
             }
-            catch 
+            catch
             {
                 return BadRequest(ModelState); //or can throw new Exception
             }
@@ -86,31 +85,32 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState); //or can throw new Exception
             }
         }
-        
+
         [Route("Filter")]
         [AllowAnonymous]
         [HttpPost]
         public IActionResult Filter(string name)
-        {       
+        {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            
-             var business = new Business();
-            if (business.Name != name)
+
+            var businessfilter = _businessRepository.Filter(name);
+
+            if (businessfilter == null)
             {
-                return Content("Error");
+                return Content("The business is not found!");
             }
 
             try
-            {                   
-                return Ok(_businessRepository.FilterBusiness(name));
+            {
+                return Ok(businessfilter);
             }
             catch
             {
                 return BadRequest(ModelState); //or can throw new Exception
-            }   
+            }
         }
     }
 }

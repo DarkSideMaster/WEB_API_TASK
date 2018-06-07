@@ -50,10 +50,9 @@ namespace Database.Repositories
             return deleteFamilyentity;
         }
         
-        public Family FilterFamily(string name)
+        public Family Filter(string name)
         {
-            return _context.Familys
-                .FirstOrDefault(family => family.Name == name);
+            return _context.Familys.FirstOrDefault(family => family.Name == name);
         }            
     }
 }

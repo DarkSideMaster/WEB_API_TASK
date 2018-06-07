@@ -50,10 +50,9 @@ namespace Database.Repositories
             return deleteOfferingentity; 
         }
         
-        public Offering FilterOfferingy(string name)
+        public Offering Filter(string name)
         {
-            return _context.Offerings
-                .FirstOrDefault(offering => offering.Name == name);
+            return _context.Offerings.FirstOrDefault(offering => offering.Name == name);
         }            
     }
 }

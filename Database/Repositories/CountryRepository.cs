@@ -11,7 +11,6 @@ namespace Database.Repositories
     public class CountryRepository : IRepository<Country>
     {
         private EnterpriseContext _context;
-
         public CountryRepository(EnterpriseContext context)
         {
             _context = context;
@@ -51,10 +50,9 @@ namespace Database.Repositories
         }
 
 
-        public Country FilterCountry(string name)
+        public Country Filter(string name)
         {
-            return _context.Сountries
-                .FirstOrDefault(country => country.Name == name);
+            return _context.Сountries.FirstOrDefault(country => country.Name == name);
         }
     }
 }

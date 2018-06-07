@@ -64,10 +64,9 @@ namespace Database.Repositories
             return deleteEnterprisesentity;
         }
         
-         public Enterprise FilterEnterprise(string name)
+         public Enterprise Filter(string name)
         {
-            return _context.Enterprises
-                .FirstOrDefault(enterprise => enterprise.Name == name);
+            return _context.Enterprises.FirstOrDefault(enterprise => enterprise.Name == name);
         }             
     }
 }

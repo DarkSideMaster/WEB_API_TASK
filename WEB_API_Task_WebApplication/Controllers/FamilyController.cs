@@ -97,20 +97,20 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
-            {  
-            
-            var family = new Family();
-            
-            if (family.Name != name)
+            var familyfilter = _familyRepository.Filter(name);
+
+            if (familyfilter == null)
             {
-                return Content("Error");
-            }         
-                return Ok(_familyRepository.FilterFamily(name));
+                return Content("The family is not found!");
+            }
+
+            try
+            {    
+                return Ok(familyfilter);
             }
             catch
             {
-                return BadRequest(ModelState); //or can throw new Exception
+                return BadRequest(ModelState); //or you can throw new Exception
             }   
         }                              
     }

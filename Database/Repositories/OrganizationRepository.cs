@@ -50,10 +50,9 @@ namespace Database.Repositories
             return deleteOrganizationentity;
         }
         
-        public Organization FilterOrganization(string name)
+        public Organization Filter(string name)
         {
-            return _context.Organizations
-                .FirstOrDefault(organization => organization.Name == name);
+            return _context.Organizations.FirstOrDefault(organization => organization.Name == name);
         }               
     }
 }

@@ -44,12 +44,18 @@ namespace Database.Repositories
 
         public User Delete(int id)
         {
-
             User user = _context.Users.Find(id);
 
             var createOrganizationentity = _context.Users.Remove(user).Entity;
             _context.SaveChanges();
             return createOrganizationentity;
         }
+
+
+        public User Filter(string name)
+        {
+            return _context.Users.FirstOrDefault(user => user.Name == name);
+        }
+
     }
 }

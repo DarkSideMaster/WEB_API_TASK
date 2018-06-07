@@ -51,7 +51,7 @@ namespace Database.Repositories
             return deleteBusinessentity;
         }
             
-        public Business FilterBusiness(string name)
+        public Business Filter(string name)
         {
                  return _context.Businesses
                 .FirstOrDefault(business => business.Name == name);

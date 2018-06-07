@@ -104,15 +104,16 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
-            {  
-            var enterprise = new Enterprise();
-            
-            if (enterprise.Name != name)
+            var enterprisefilter = _enterpriseRepository.Filter(name);
+
+            if (enterprisefilter == null)
             {
-                return Content("Error");
-            }         
-                return Ok(_enterpriseRepository.FilterEnterprise(name));
+                return Content("The enterprise is not found!");
+            }
+
+            try
+            {          
+                return Ok(enterprisefilter);
             }
             catch
             {

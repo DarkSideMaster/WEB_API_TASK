@@ -96,15 +96,16 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
-            {          
-            var offering = new Offering();
-            
-            if (offering.Name != name)
+            var offeringfilter = _offeringRepository.Filter(name);
+
+            if (offeringfilter == null)
             {
-                return Content("Error");
-            }         
-                return Ok(_offeringRepository.FilterOffering(name));
+                return Content("The offering is not found!");
+            }
+
+            try
+            {     
+                return Ok(offeringfilter);
             }
             catch
             {

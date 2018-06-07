@@ -94,20 +94,21 @@ namespace WEB_API_Task.Controllers
         [HttpPost]
         public IActionResult Filter(string name)
         {       
-        var country = new Country();
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            try
-            {                
-            if (country.Name != name)
+            var filtercountryfilter = _countryRepository.Filter(name);
+
+            if (filtercountryfilter == null)
             {
-                return Content("Error");
-            }         
-                return Ok(_countryRepository.FilterCountry(name));
+                return Content("The country is not found!");
+            }
+
+            try
+            {
+                return Ok(filtercountryfilter);
             }
             catch
             {

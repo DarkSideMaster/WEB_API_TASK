@@ -45,7 +45,7 @@ namespace WEB_API_Task.Controllers
             }
 
             catch
-            {            
+            {
                 return BadRequest(ModelState); //or you can throw new Exception
             }
         }
@@ -87,6 +87,33 @@ namespace WEB_API_Task.Controllers
             catch
             {
                 return BadRequest(ModelState); //or you can throw new Exception
+            }
+        }
+
+        [Route("Filter")]
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult Filter(string name)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var userfilter = _userRepository.Filter(name);
+
+            if (userfilter == null)
+            {
+                return Content("The business is not found!");
+            }
+
+            try
+            {
+                return Ok(userfilter);
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
             }
         }
     }
