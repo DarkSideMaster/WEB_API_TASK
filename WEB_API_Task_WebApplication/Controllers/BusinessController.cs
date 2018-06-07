@@ -87,7 +87,7 @@ namespace WEB_API_Task.Controllers
             }
         }
         
-   [Route("Filter")]
+        [Route("Filter")]
         [HttpPost]
         public IActionResult Filter(string name)
         {       
