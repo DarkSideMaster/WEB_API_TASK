@@ -186,7 +186,7 @@ Deleting the existing entity in your Enterprise Tree.
 
 ## Filter
 
-Filtering the existing entity in your Enterprise Tree.
+Filtering the existing entity by name in your Enterprise Tree.
 
 **URL** : `api/Enterprise/Filter?Name=New Enterprise`
 
