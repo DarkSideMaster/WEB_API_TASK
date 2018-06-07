@@ -86,5 +86,30 @@ namespace WEB_API_Task.Controllers
                 return BadRequest(ModelState);
             }
         }
+        
+        [Route("Filter")]
+        [HttpPost]
+        public IActionResult Filter(string name)
+        {              
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {  
+            var family = new Family();
+            
+            if (family.Name != name)
+            {
+                return Content("Error");
+            }         
+                return Ok(_familyRepository.FilterFamily(name));
+            }
+            catch
+            {
+                return BadRequest(ModelState); //or can throw new Exception
+            }   
+        }                              
     }
 }
