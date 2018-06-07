@@ -90,6 +90,7 @@ namespace WEB_API_Task.Controllers
         }
 
         [Route("Filter")]
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult Filter(string name)
         {       
