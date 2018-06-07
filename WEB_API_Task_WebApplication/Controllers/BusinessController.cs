@@ -92,19 +92,19 @@ namespace WEB_API_Task.Controllers
         [HttpPost]
         public IActionResult Filter(string name)
         {       
-        var business = new Business();
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            try
-            {                
+            
+             var business = new Business();
             if (business.Name != name)
             {
                 return Content("Error");
-            }         
+            }
+
+            try
+            {                   
                 return Ok(_businessRepository.FilterBusiness(name));
             }
             catch
