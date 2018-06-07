@@ -109,10 +109,7 @@ namespace WEB_API_Task.Controllers
             catch
             {
                 return BadRequest(ModelState); //or can throw new Exception
-            }      
-        
-        
-        
-        
+            }   
+        }
     }
 }
