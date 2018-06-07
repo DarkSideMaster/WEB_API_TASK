@@ -49,5 +49,11 @@ namespace Database.Repositories
             _context.SaveChanges();
             return deleteOrganizationentity;
         }
+        
+        public Organization FilterOrganization(string name)
+        {
+            return _context.Organizations
+                .FirstOrDefault(organization => organization.Name == name);
+        }               
     }
 }
